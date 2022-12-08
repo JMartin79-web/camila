@@ -1,0 +1,12 @@
+.contains-hero{
+    width: 100%;
+    @include flex-center;
+    background-color: gainsboro;
+    .hero{
+        @include width;
+        @include padding;
+        @include flex-center;
+        flex-direction: column;
+        height: 100vh;
+    }
+}

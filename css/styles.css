@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+li {
+  list-style: none;
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -921,6 +925,102 @@ body {
     display: flex;
     flex-direction: column;
   }
+}
+.contains-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+}
+.contains-hero .hero {
+  width: 100%;
+  max-width: 1080px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.contains-about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contains-about .about {
+  width: 100%;
+  max-width: 1080px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contains-about .about .about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contains-carrousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contains-carrousel .carrousel-div {
+  width: 100%;
+  max-width: 1080px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+}
+.contains-carrousel .carrousel-div .carrousel {
+  width: 100%;
+  padding: 15px;
+  background-color: aliceblue;
+  overflow: hidden;
+}
+.contains-carrousel .carrousel-div .carrousel .grande {
+  width: 300%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.contains-carrousel .carrousel-div .carrousel .grande .img {
+  width: calc(33.3333333333% - 3em);
+  min-height: 10vh;
+  background-color: beige;
+}
+.contains-carrousel .carrousel-div .carrousel .puntos {
+  margin: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.contains-carrousel .carrousel-div .carrousel .puntos .punto {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 1.5rem;
+  border-radius: 50%;
+  background-color: antiquewhite;
+}
+.contains-carrousel .carrousel-div .carrousel .puntos .punto.activo {
+  background-color: lightblue;
 }
 
 /*# sourceMappingURL=styles.css.map */

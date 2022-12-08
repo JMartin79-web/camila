@@ -10,7 +10,7 @@
 <body>
 
     <!-- HEADER -->
-    <div class="contains-header">
+    <div class="contains-header" id="header">
 
         <div class="header1">
             <header class="header">
@@ -23,7 +23,7 @@
                     <a href="#">link</a>
                 </div>
                 <div class="header-menu">
-                    <button class="hamburger hamburger--squeeze" type="button">
+                    <button onclick="handleToggle()" class="hamburger hamburger--squeeze" type="button">
                         <span class="hamburger-box">
                           <span class="hamburger-inner"></span>
                         </span>
@@ -42,11 +42,51 @@
 
     </div>
     
+    <!-- HERO SECTIO -->
+    <div class="contains-hero">
+        <section class="hero">
+            <h1>TITULO</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium vel quo expedita ipsa, ea quos voluptatum deserunt dignissimos soluta voluptatem adipisci magnam alias accusantium beatae quisquam ut eaque delectus.</p>
+            <button>Call to action</button>
+        </section>
+    </div>
+    
+    <!-- ABOUT SECTIO -->
+    <div class="contains-about">
+        <section class="about">
+            <h2>Subtitulo</h2>
+            <div class="about-img">
+                <img src="#" alt="perfil">
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, nam beatae obcaecati aperiam quibusdam id reprehenderit nisi repellendus corporis architecto voluptate soluta dolor at vitae. Voluptatem in cupiditate omnis explicabo!</p>
+        </section>
+    </div>
 
+    <!-- CARROUSEL SECTION -->
+    <div class="contains-carrousel">
+        <div class="carrousel-div">
+            <div class="carrousel">
+                <div class="grande">
+                    <img src="#" alt="Imagen 1" class="img">
+                    <img src="#" alt="Imagen 2" class="img">
+                    <img src="#" alt="Imagen 3" class="img">
+                </div>
+        
+                <ul class="puntos">
+                    <li class="punto activo"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                </ul>
+            </div>
 
-    <h1>HOLA MUNDO</h1>
+        </div>
+    </div>
+
 </body>
 
 <!-- SCRIPTS -->
 <script src="./src/hamburger.js"></script>
+<script src="./src/carrousel.js"></script>
+<!-- <script src="./src/hamburger.js"></script> -->
+
 </html>

@@ -1,0 +1,18 @@
+.contains-about{
+    width: 100%;
+    @include flex-center;
+    .about{
+        @include width;
+        @include padding;
+        @include flex-center;
+        flex-direction: column;
+        .about-img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: aqua;
+            @include flex-center;
+
+        }
+    }
+}
