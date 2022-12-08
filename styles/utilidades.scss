@@ -1,0 +1,17 @@
+// FLEX CENTER 
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// WIDTH
+@mixin width {
+    width: 100%;
+    max-width: 1080px;
+}
+
+// PADDING FOR MAIN DIV
+@mixin padding {
+    padding: 15px;
+}
