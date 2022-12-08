@@ -1,16 +1,13 @@
 .contains-carrousel{
     width: 100%;
     @include flex-center;
+    flex-direction: column;
     .carrousel-div{
         @include width;
-        @include padding;
         @include flex-center;
-        background-color: aquamarine;
-
         .carrousel{
             width: 100%;
             @include padding;
-            background-color: aliceblue;
             overflow: hidden;
             .grande{
                 width: 300%;
@@ -27,22 +24,28 @@
                 }
             }
 
-            .puntos{
-                margin:1rem;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-                .punto{
-                    cursor: pointer;
-                    width:  1.5rem;
-                    height: 1.5rem;
-                    margin: 1.5rem;
-                    border-radius: 50%;
-                    background-color: antiquewhite;
+            .contains-puntos{
+                @include flex-center;
+                .puntos{
+                    max-width: 500px;
+                    padding: 0%;
+                    margin:1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-flow: row nowrap;
+                    .punto{
+                        cursor: pointer;
+                        width:  1.5rem;
+                        height: 1.5rem;
+                        margin: 1.5rem;
+                        border-radius: 50%;
+                        background-color: antiquewhite;
+                    }
+                    .punto.activo{background-color: lightblue;}
                 }
-                .punto.activo{background-color: lightblue;}
             }
+            
 
 
         }

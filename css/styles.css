@@ -974,20 +974,18 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .contains-carrousel .carrousel-div {
   width: 100%;
   max-width: 1080px;
-  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
 }
 .contains-carrousel .carrousel-div .carrousel {
   width: 100%;
   padding: 15px;
-  background-color: aliceblue;
   overflow: hidden;
 }
 .contains-carrousel .carrousel-div .carrousel .grande {
@@ -1004,14 +1002,21 @@ li {
   min-height: 10vh;
   background-color: beige;
 }
-.contains-carrousel .carrousel-div .carrousel .puntos {
-  margin: 1rem;
+.contains-carrousel .carrousel-div .carrousel .contains-puntos {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-.contains-carrousel .carrousel-div .carrousel .puntos .punto {
+.contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos {
+  max-width: 500px;
+  padding: 0%;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+}
+.contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .punto {
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
@@ -1019,7 +1024,7 @@ li {
   border-radius: 50%;
   background-color: antiquewhite;
 }
-.contains-carrousel .carrousel-div .carrousel .puntos .punto.activo {
+.contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .punto.activo {
   background-color: lightblue;
 }
 
