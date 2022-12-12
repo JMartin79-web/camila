@@ -30,3 +30,69 @@ punto.forEach( ( cadaPunto , i )=> {
 
     })
 })
+
+
+
+//  LOGICA PARA MOSTRAR LOS TEMPLATES
+
+const punto1 = document.getElementById("punto1")
+const punto2 = document.getElementById("punto2")
+const punto3 = document.getElementById("punto3")
+
+// div donde va a ir el fragment
+const div = document.getElementById("tour-info")
+let fragment = document.createDocumentFragment();
+
+// templates
+const template1 = document.getElementById("template-1").content
+const template2 = document.getElementById("template-2").content
+const template3 = document.getElementById("template-3").content
+
+// al principio tiene abierto el template 1
+const defaultTemplate = template1.cloneNode(true);
+fragment.appendChild(defaultTemplate);
+div.appendChild(fragment);
+
+
+punto.forEach( (cadaPunto) =>{
+    cadaPunto.addEventListener("click", ()=>{
+        if(punto1.classList.contains("activo")){
+            console.log("Punto 1 contiene la clase activo")
+            const clone = template1.cloneNode(true);
+            fragment.appendChild(clone);
+            div.innerHTML = "";
+            div.appendChild(fragment);
+        }
+        
+        if(punto2.classList.contains("activo")){
+            console.log("Punto 2 contiene la clase activo")
+            const clone = template2.cloneNode(true);
+            fragment.appendChild(clone);
+            div.innerHTML = "";
+            div.appendChild(fragment);
+        }
+        
+        if(punto3.classList.contains("activo")){
+            console.log("Punto 3 contiene la clase activo")
+            const clone = template3.cloneNode(true);
+            fragment.appendChild(clone);
+            div.innerHTML = "";
+            div.appendChild(fragment);
+        }
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

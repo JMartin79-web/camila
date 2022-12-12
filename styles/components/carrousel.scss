@@ -72,11 +72,11 @@
                         cursor: pointer;
                         width:  1.5rem;
                         height: 1.5rem;
-                        margin: 1.5rem;
+                        margin: 0rem 1.5rem;
                         border-radius: 50%;
-                        background-color: antiquewhite;
+                        background-color: $bordo;
                     }
-                    .punto.activo{background-color: lightblue;}
+                    .punto.activo{background-color: $rojo;}
                 }
             }
             
@@ -84,4 +84,13 @@
 
         }
     }
+
+
+}
+
+#tour-info{
+    @include width;
+    @include padding;
+    padding-top: 0;
+    h2{@include titleH2; color: $rojo;}
 }

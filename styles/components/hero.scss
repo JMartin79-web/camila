@@ -3,10 +3,11 @@
     @include flex-center;
     position: relative;
     overflow-x: hidden;
-    background-color: $rojo;
     .hero-img{
         width: 100%;
         height: 100vh;
+        max-height: 1080px;
+        padding: 0;
         position: absolute;
         z-index: 1;
         overflow: hidden;
@@ -22,6 +23,7 @@
         @include flex-center;
         flex-direction: column;
         height: 100vh;
+        max-height: 1080px;
         h1{ @include titleH1; color: $blanco;}
         p{color: $blanco; @include padding;}
         .button{

@@ -2,6 +2,10 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
@@ -944,11 +948,12 @@ p {
   align-items: center;
   position: relative;
   overflow-x: hidden;
-  background-color: #CE1212;
 }
 .contains-hero .hero-img {
   width: 100%;
   height: 100vh;
+  max-height: 1080px;
+  padding: 0;
   position: absolute;
   z-index: 1;
   overflow: hidden;
@@ -967,6 +972,7 @@ p {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  max-height: 1080px;
 }
 .contains-hero .hero h1 {
   font-family: "Unbounded", cursive;
@@ -985,6 +991,7 @@ p {
   font-family: "Unbounded", cursive;
   font-size: 1.5rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .contains-about {
@@ -1121,12 +1128,23 @@ p {
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 1.5rem;
+  margin: 0rem 1.5rem;
   border-radius: 50%;
-  background-color: antiquewhite;
+  background-color: #810000;
 }
 .contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .punto.activo {
-  background-color: lightblue;
+  background-color: #CE1212;
+}
+
+#tour-info {
+  width: 100%;
+  max-width: 1080px;
+  padding: 15px;
+  padding-top: 0;
+}
+#tour-info h2 {
+  font-family: "Unbounded", cursive;
+  color: #CE1212;
 }
 
 .contains-footer {
