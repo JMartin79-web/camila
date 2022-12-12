@@ -11,7 +11,7 @@
     
     .header1{
         @include flex-center;
-        width: 100%;
+        width: 90%;
         .header{
             @include width;
             @include padding;
@@ -44,7 +44,10 @@
         .header1{
             .header{
                 .header-links{display: none;}
-                .header-menu{display: block;}
+                .header-menu{
+                    display: block;
+                    .hamburger-box{overflow:visible;.hamburger-inner{overflow:visible}}
+                }
             }
         }
 

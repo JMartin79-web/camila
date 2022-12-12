@@ -18,6 +18,7 @@ $negro: #1B1717;
 }
 @mixin titleH2 {
     font-family: 'Unbounded', cursive;
+    font-weight: 400;
 }
 
 // BUTTON
@@ -28,6 +29,17 @@ $negro: #1B1717;
     color: $blanco;
     font-family: 'Unbounded', cursive;
     font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@mixin btn-s {
+    border: none;
+    padding: 5px 10px;
+    background-color: $rojo;
+    color: $blanco;
+    font-family: 'Unbounded', cursive;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
 }

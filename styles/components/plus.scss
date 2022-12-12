@@ -1,0 +1,24 @@
+.contains-plus{
+    width: 100%;
+    @include flex-center;
+    background-color: $bordo;
+    .plus{
+        @include width;
+        @include flex-center;
+        align-items: stretch;
+        .plus-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            @include padding;
+            background-color: $rojo;
+            h2{@include titleH2; color: $blanco; text-align: center;}
+        }
+        .plus-txt{
+            width: 60%;
+            @include padding;
+            p{color: $blanco;}
+        }
+    }
+}

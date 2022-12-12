@@ -5,18 +5,21 @@
     background-color: $beige;
     .carrousel-title{
         @include flex-center;
+        @include width;
+        min-height: 4rem;
         flex-direction: column;
         position: relative;
         .bg-div-title{
+            
+            padding: 0 10%;
             position: absolute;
             z-index: 1;
-            @include width;
             display: flex;
             flex-direction: column;
             align-items: center;
             .bg-title{
                 height: 2rem;
-                width: 100%;
+                min-width: 6rem;
                 padding: 0 3rem;
                 border-radius: 1rem;
                 background-color: $rojo;
@@ -89,8 +92,13 @@
 }
 
 #tour-info{
-    @include width;
-    @include padding;
-    padding-top: 0;
-    h2{@include titleH2; color: $rojo;}
+    width: 100%;
+    @include flex-center;
+    .tour{
+        @include width;
+        @include padding;
+        padding-top: 0;
+        h2{@include titleH2; color: $rojo;}
+    }
+    
 }

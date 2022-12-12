@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Unbounded:wght@400;500;600;700;800;900&display=swap");
-body {
+* {
   margin: 0;
   padding: 0;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
+  overflow-x: hidden;
+}
+
+body {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -53,7 +52,7 @@ p {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: rgb(255, 255, 255);
 }
 
 .hamburger-box {
@@ -71,8 +70,8 @@ p {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
-  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px;
   position: absolute;
   transition-property: transform;
   transition-duration: 0.15s;
@@ -887,7 +886,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
 }
 .contains-header .header1 .header {
   width: 100%;
@@ -926,6 +925,12 @@ p {
   .contains-header .header1 .header .header-menu {
     display: block;
   }
+  .contains-header .header1 .header .header-menu .hamburger-box {
+    overflow: visible;
+  }
+  .contains-header .header1 .header .header-menu .hamburger-box .hamburger-inner {
+    overflow: visible;
+  }
   .contains-header .header2 {
     display: none;
   }
@@ -946,8 +951,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow-x: hidden;
 }
 .contains-hero .hero-img {
   width: 100%;
@@ -959,7 +962,8 @@ p {
   overflow: hidden;
 }
 .contains-hero .hero-img img {
-  object-fit: cover;
+  display: block;
+  object-fit: contain;
   overflow: hidden;
 }
 .contains-hero .hero {
@@ -1020,6 +1024,7 @@ p {
 }
 .contains-about .about .about-title h2 {
   font-family: "Unbounded", cursive;
+  font-weight: 400;
   max-width: 90%;
   color: #FFF;
   text-align: center;
@@ -1053,21 +1058,23 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 4rem;
   flex-direction: column;
   position: relative;
 }
 .contains-carrousel .carrousel-title .bg-div-title {
+  padding: 0 10%;
   position: absolute;
   z-index: 1;
-  width: 100%;
-  max-width: 1080px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .contains-carrousel .carrousel-title .bg-div-title .bg-title {
   height: 2rem;
-  width: 100%;
+  min-width: 6rem;
   padding: 0 3rem;
   border-radius: 1rem;
   background-color: #CE1212;
@@ -1080,6 +1087,7 @@ p {
 }
 .contains-carrousel .carrousel-title .title-txt h2 {
   font-family: "Unbounded", cursive;
+  font-weight: 400;
   max-width: 100%;
   color: #FFF;
   text-align: center;
@@ -1138,13 +1146,92 @@ p {
 
 #tour-info {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tour-info .tour {
+  width: 100%;
   max-width: 1080px;
   padding: 15px;
   padding-top: 0;
 }
-#tour-info h2 {
+#tour-info .tour h2 {
   font-family: "Unbounded", cursive;
+  font-weight: 400;
   color: #CE1212;
+}
+
+.contains-plus {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #810000;
+}
+.contains-plus .plus {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: stretch;
+}
+.contains-plus .plus .plus-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 15px;
+  background-color: #CE1212;
+}
+.contains-plus .plus .plus-title h2 {
+  font-family: "Unbounded", cursive;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+}
+.contains-plus .plus .plus-txt {
+  width: 60%;
+  padding: 15px;
+}
+.contains-plus .plus .plus-txt p {
+  color: #FFF;
+}
+
+.contains-call {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEBDD;
+}
+.contains-call .call {
+  width: 100%;
+  max-width: 1080px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contains-call .call h2 {
+  font-family: "Unbounded", cursive;
+  font-weight: 400;
+  color: #CE1212;
+}
+.contains-call .call p {
+  padding: 15px;
+}
+.contains-call .call .button {
+  border: none;
+  padding: 5px 10px;
+  background-color: #CE1212;
+  color: #FFF;
+  font-family: "Unbounded", cursive;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .contains-footer {
