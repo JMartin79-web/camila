@@ -2,6 +2,40 @@
     width: 100%;
     @include flex-center;
     flex-direction: column;
+    background-color: $beige;
+    .carrousel-title{
+        @include flex-center;
+        flex-direction: column;
+        position: relative;
+        .bg-div-title{
+            position: absolute;
+            z-index: 1;
+            @include width;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .bg-title{
+                height: 2rem;
+                width: 100%;
+                padding: 0 3rem;
+                border-radius: 1rem;
+                background-color: $rojo;
+            }
+        }
+        
+        .title-txt{
+            position: relative;
+            z-index: 3;
+            display:inline;
+            text-align: center;
+            h2{
+                @include titleH2;
+                max-width: 100%;
+                color: $blanco;
+                text-align: center;}
+        }
+    }
+
     .carrousel-div{
         @include width;
         @include flex-center;

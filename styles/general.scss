@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +7,14 @@ body{
     list-style: none;
     text-decoration: none;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    
 }
 li{
     list-style: none;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: $negro;
 }

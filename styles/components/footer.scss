@@ -1,0 +1,9 @@
+.contains-footer{
+    width: 100%;
+    @include flex-center;
+    background-color: $bordo;
+    .footer{
+        @include width;
+        @include flex-center;
+    }
+}

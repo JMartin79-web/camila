@@ -1,3 +1,37 @@
+// TIPOGRAFIA
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Unbounded', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Unbounded:wght@400;500;600;700;800;900&display=swap');
+
+// COLORES
+$blanco: #FFF;
+$beige: #EEEBDD;
+$amarillo: #F9D366;
+$rojo: #CE1212;
+$bordo: #810000;
+$negro: #1B1717;
+
+// TITULOS
+@mixin titleH1 {
+    font-family: 'Unbounded', cursive;
+    font-size: 3rem;
+}
+@mixin titleH2 {
+    font-family: 'Unbounded', cursive;
+}
+
+// BUTTON
+@mixin btn {
+    border: none;
+    padding: 10px 20px;
+    background-color: $rojo;
+    color: $blanco;
+    font-family: 'Unbounded', cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
 // FLEX CENTER 
 @mixin flex-center {
     display: flex;

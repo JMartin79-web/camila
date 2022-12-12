@@ -1,17 +1,36 @@
 .contains-about{
     width: 100%;
     @include flex-center;
+    background-color: $beige;
     .about{
         @include width;
         @include padding;
         @include flex-center;
+        padding-top: 0px;
         flex-direction: column;
-        .about-img{
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: aqua;
+        .about-title{
             @include flex-center;
+            width: 300px;
+            background-color: $rojo;
+            h2{
+                @include titleH2;
+                max-width: 90%;
+                color: $blanco;
+                text-align: center;}
+        }
+        .about-img{
+            width: 300px;
+            height: 300px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            background-color: $rojo;
+            @include flex-center;
+            img{
+                overflow: hidden;
+                max-width: 200px;
+                border-radius: 50%;
+                border: solid 4px $bordo;
+            }
 
         }
     }
