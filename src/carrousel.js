@@ -54,45 +54,55 @@ fragment.appendChild(defaultTemplate);
 div.appendChild(fragment);
 
 
+
+// manejar el ver mas
+function handleTourBtn (){
+    const tourBtn = document.querySelector(".tour-btn")
+    const tourDiv = document.querySelector(".tour-div")
+
+    tourDiv.classList.toggle("tour-div-hiden")
+    if(tourDiv.classList.contains("tour-div-hiden")){
+        tourBtn.innerHTML = "Ver más"
+    }else{tourBtn.innerHTML = "Ver menos"}
+}
+
+
+
 punto.forEach( (cadaPunto) =>{
     cadaPunto.addEventListener("click", ()=>{
         if(punto1.classList.contains("activo")){
+            div.innerHTML = "";
             console.log("Punto 1 contiene la clase activo")
             const clone = template1.cloneNode(true);
             fragment.appendChild(clone);
-            div.innerHTML = "";
             div.appendChild(fragment);
+
+            tourBtn.innerHTML = "Ver más"
+            handleTourBtn()
         }
         
         if(punto2.classList.contains("activo")){
+            div.innerHTML = "";
             console.log("Punto 2 contiene la clase activo")
             const clone = template2.cloneNode(true);
             fragment.appendChild(clone);
-            div.innerHTML = "";
             div.appendChild(fragment);
+
+            tourBtn.innerHTML = "Ver más"
+            handleTourBtn()
         }
         
         if(punto3.classList.contains("activo")){
+            div.innerHTML = "";
             console.log("Punto 3 contiene la clase activo")
             const clone = template3.cloneNode(true);
             fragment.appendChild(clone);
-            div.innerHTML = "";
             div.appendChild(fragment);
+
+            tourBtn.innerHTML = "Ver más"
+            handleTourBtn()
+            
         }
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

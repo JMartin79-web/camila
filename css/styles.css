@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Unbounded:wght@400;500;600;700;800;900&display=swap");
+@keyframes magia {
+  0% {
+    width: 18px;
+    height: 18px;
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 18px;
+    height: 18px;
+  }
+}
+@keyframes magia-plus {
+  10% {
+    width: 18px;
+    height: 18px;
+  }
+  60% {
+    width: 0px;
+    height: 0px;
+  }
+  90% {
+    width: 18px;
+    height: 18px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +47,30 @@ li {
 p {
   font-family: "Montserrat", sans-serif;
   color: #1B1717;
+}
+
+.contains-magia {
+  display: inline-flex;
+  width: 18px;
+  height: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  z-index: 15 !important;
+  margin-left: -3px;
+}
+.contains-magia .magia {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contains-magia .magia img {
+  animation-name: magia;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
 }
 
 /*!
@@ -1063,7 +1115,6 @@ p {
   max-width: 1080px;
   min-height: 4rem;
   flex-direction: column;
-  position: relative;
 }
 .contains-carrousel .carrousel-title .bg-div-title {
   padding: 0 10%;
@@ -1081,7 +1132,6 @@ p {
   background-color: #CE1212;
 }
 .contains-carrousel .carrousel-title .title-txt {
-  position: relative;
   z-index: 3;
   display: inline;
   text-align: center;
@@ -1162,7 +1212,32 @@ p {
   font-weight: 400;
   color: #CE1212;
 }
+#tour-info .tour .tour-div-hiden {
+  display: none;
+}
+#tour-info .tour .tour-div {
+  padding: 15px;
+}
 
+/*
+.tour-details{
+            margin-top: 15px;
+            @include padding;
+            //background-color: $rojo;
+
+            .tour-summary{
+                cursor: pointer;
+                list-style: none;
+                display: inline;
+                min-width: 100px;
+                p{
+                    color: $rojo;
+                    text-decoration: underline;
+                    font-weight: 700;
+                }
+            }
+        }
+*/
 .contains-plus {
   width: 100%;
   display: flex;
@@ -1185,6 +1260,29 @@ p {
   width: 40%;
   padding: 15px;
   background-color: #CE1212;
+}
+.contains-plus .plus .plus-title .contains-plus-magia {
+  display: inline-flex;
+  width: 18px;
+  height: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 15 !important;
+  margin-left: -20px;
+}
+.contains-plus .plus .plus-title .contains-plus-magia .plus-magia {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contains-plus .plus .plus-title .contains-plus-magia .plus-magia img {
+  animation-name: magia-plus;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
 }
 .contains-plus .plus .plus-title h2 {
   font-family: "Unbounded", cursive;
@@ -1215,6 +1313,11 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.contains-call .call .call-img {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
 }
 .contains-call .call h2 {
   font-family: "Unbounded", cursive;

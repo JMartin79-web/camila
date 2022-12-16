@@ -7,6 +7,14 @@
         @include padding;
         @include flex-center;
         flex-direction: column;
+
+        .call-img{
+
+            width: 200px;
+            height: 200px;
+            @include padding;
+        }
+
         h2{@include titleH2; color: $rojo};
         p{@include padding}
         .button{ @include btn-s;}

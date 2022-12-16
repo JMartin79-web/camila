@@ -62,3 +62,39 @@ $negro: #1B1717;
 @mixin padding {
     padding: 15px;
 }
+
+@mixin padding-top {
+    padding-top: 15px;
+}
+
+// ANIMACIONES
+
+@keyframes magia {
+    0%{
+        width: 18px;
+        height: 18px;
+    }
+    50%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@keyframes magia-plus {
+    10%{
+        width: 18px;
+        height: 18px;
+    }
+    60%{
+        width: 0px;
+        height: 0px;
+    }
+    90%{
+        width: 18px;
+        height: 18px;
+    }
+}

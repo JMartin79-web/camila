@@ -15,7 +15,7 @@
         <div class="header1">
             <header class="header">
                 <div class="header-logo">
-                    <a href="#">CAMILA</a>
+                    <!-- <a href="#">CAMILA</a> -->
                 </div>
                 <div class="header-links">
                     <a href="#">link</a>
@@ -75,7 +75,15 @@
                 <div class="bg-title"></div>
             </div>
             <div class="title-txt">
-                <h2>Our tours</h2>
+                
+                <h2>Our tours  
+                    <div class="contains-magia">
+                        <div class="magia">
+                            <img src="./assets/fotos/magia.png">
+                        </div>
+                        
+                    </div>
+                </h2>
             </div>
         </div>
         
@@ -108,7 +116,13 @@
     <div class="contains-plus">
         <div class="plus">
             <div class="plus-title">
-                <h2>Plus<br>services</h2>
+                <h2><div class="contains-plus-magia">
+                    <div class="plus-magia">
+                        <img src="./assets/fotos/magia.png">
+                    </div>
+                </div>Plus
+                    <br>
+                    services</h2>
             </div>
             <div class="plus-txt">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam porro veniam in eum ipsum temporibus. Tenetur repudiandae quasi adipisci nostrum corrupti corporis rerum provident minus esse iure. Qui, libero quisquam.</p>
@@ -119,7 +133,7 @@
     <!-- CALL TO ACTION -->
     <div class="contains-call">
         <section class="call">
-            <img src="#" alt="">
+            <img class="call-img" src="./assets/fotos/maiga-title.png" alt="magic title">
             <h2>Let´s make it happen!</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit neque nemo ratione deserunt voluptas fugiat eaque dolor error iste. Corporis maxime eligendi rem exercitationem ipsum dolor natus expedita quod amet.</p>
             <button class="button">BOOK NOW</button>
@@ -146,14 +160,24 @@
         <div class="tour">
             <h2>Tour mountain</h2>
             <p>Descripcion bla bla bla</p>
+            <p class="tour-btn" onclick="handleTourBtn()">Ver más</p>
+            <div class="tour-div tour-div-hiden">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni temporibus vitae eos cupiditate libero deserunt quos nobis ipsa. Pariatur consectetur facilis asperiores quam, amet deserunt adipisci at illum explicabo a?</p>
+            </div>
         </div>
         
+        
+
     </template>
 
     <template id="template-2">
         <div class="tour">
             <h2>TOUR 2</h2>
             <p>Descripcion bla bla bla</p>
+            <p class="tour-btn" onclick="handleTourBtn()">Ver más</p>
+            <div class="tour-div tour-div-hiden">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni temporibus vitae eos cupiditate libero deserunt quos nobis ipsa. Pariatur consectetur facilis asperiores quam, amet deserunt adipisci at illum explicabo a?</p>
+            </div>
         </div>
         
     </template>
@@ -162,6 +186,10 @@
         <div class="tour">
             <h2>TOUR 3</h2>
             <p>Descripcion bla bla bla</p>
+            <p class="tour-btn" onclick="handleTourBtn()">Ver más</p>
+            <div class="tour-div tour-div-hiden">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni temporibus vitae eos cupiditate libero deserunt quos nobis ipsa. Pariatur consectetur facilis asperiores quam, amet deserunt adipisci at illum explicabo a?</p>
+            </div>
         </div>
     </template>
 </body>
@@ -169,6 +197,20 @@
 <!-- SCRIPTS -->
 <script src="./src/hamburger.js"></script>
 <script src="./src/carrousel.js"></script>
+<script src="./src/carrousel-info.js"></script>
 <!-- <script src="./src/hamburger.js"></script> -->
 
 </html>
+
+<!-- 
+
+    <details class="tour-details tour-details-closed">
+                <summary class="tour-summary" onclick="handleDetails()"><p class="tour-summary-p"></p></summary>
+                <div class="contains-tour-info">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eligendi soluta voluptas porro maiores, reiciendis quaerat ducimus animi ab ratione deleniti doloremque nisi minima quisquam! Eius vitae alias amet aperiam.
+                    </p>
+                </div>
+            </details>
+
+ -->

@@ -20,3 +20,27 @@ p{
     font-family: 'Montserrat', sans-serif;
     color: $negro;
 }
+
+.contains-magia{
+    display: inline-flex;
+    width: 18px;
+    height: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    z-index: 15!important;
+    margin-left: -3px;
+    .magia{
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            animation-name: magia;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+    }
+}
