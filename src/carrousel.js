@@ -1,6 +1,7 @@
 const grande    = document.querySelector('.grande')
 const punto     = document.querySelectorAll('.punto')
 
+
 // Cuando CLICK en punto
     // Saber la posición de ese punto
     // Aplicar un transform translateX al grande
@@ -27,7 +28,7 @@ punto.forEach( ( cadaPunto , i )=> {
         })
         // Añadir la clase activo en el punto que hemos hecho CLICK
         punto[i].classList.add('activo')
-
+        
     })
 })
 
@@ -57,27 +58,35 @@ div.appendChild(fragment);
 
 // manejar el ver mas
 function handleTourBtn (){
+
     const tourBtn = document.querySelector(".tour-btn")
     const tourDiv = document.querySelector(".tour-div")
 
-    tourDiv.classList.toggle("tour-div-hiden")
     if(tourDiv.classList.contains("tour-div-hiden")){
         tourBtn.innerHTML = "Ver más +"
-    }else{tourBtn.innerHTML = "Ver menos -"}
+        tourDiv.classList.remove("tour-div-hiden")
+    }else{
+        tourBtn.innerHTML = "Ver menos -"
+        tourDiv.classList.add("tour-div-hiden")
+    }
 }
 
 
 
 punto.forEach( (cadaPunto) =>{
     cadaPunto.addEventListener("click", ()=>{
+        
         if(punto1.classList.contains("activo")){
             div.innerHTML = "";
             console.log("Punto 1 contiene la clase activo")
             const clone = template1.cloneNode(true);
             fragment.appendChild(clone);
             div.appendChild(fragment);
-
-            handleTourBtn()
+            
+            const tourBtn = document.querySelector(".tour-btn")
+            tourBtn.addEventListener("click", handleTourBtn)
+            
+            
         }
         
         if(punto2.classList.contains("activo")){
@@ -86,8 +95,9 @@ punto.forEach( (cadaPunto) =>{
             const clone = template2.cloneNode(true);
             fragment.appendChild(clone);
             div.appendChild(fragment);
-
-            handleTourBtn()
+            
+            const tourBtn = document.querySelector(".tour-btn")
+            tourBtn.addEventListener("click", handleTourBtn)
         }
         
         if(punto3.classList.contains("activo")){
@@ -96,8 +106,9 @@ punto.forEach( (cadaPunto) =>{
             const clone = template3.cloneNode(true);
             fragment.appendChild(clone);
             div.appendChild(fragment);
-
-            handleTourBtn()
+            
+            const tourBtn = document.querySelector(".tour-btn")
+            tourBtn.addEventListener("click", handleTourBtn)
             
         }
     })
