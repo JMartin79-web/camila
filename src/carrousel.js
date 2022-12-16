@@ -62,8 +62,8 @@ function handleTourBtn (){
 
     tourDiv.classList.toggle("tour-div-hiden")
     if(tourDiv.classList.contains("tour-div-hiden")){
-        tourBtn.innerHTML = "Ver más"
-    }else{tourBtn.innerHTML = "Ver menos"}
+        tourBtn.innerHTML = "Ver más +"
+    }else{tourBtn.innerHTML = "Ver menos -"}
 }
 
 
@@ -77,7 +77,6 @@ punto.forEach( (cadaPunto) =>{
             fragment.appendChild(clone);
             div.appendChild(fragment);
 
-            tourBtn.innerHTML = "Ver más"
             handleTourBtn()
         }
         
@@ -88,7 +87,6 @@ punto.forEach( (cadaPunto) =>{
             fragment.appendChild(clone);
             div.appendChild(fragment);
 
-            tourBtn.innerHTML = "Ver más"
             handleTourBtn()
         }
         
@@ -99,7 +97,6 @@ punto.forEach( (cadaPunto) =>{
             fragment.appendChild(clone);
             div.appendChild(fragment);
 
-            tourBtn.innerHTML = "Ver más"
             handleTourBtn()
             
         }

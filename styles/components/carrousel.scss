@@ -101,6 +101,14 @@
         padding-top: 0;
         h2{@include titleH2; color: $rojo;}
 
+        .tour-btn{
+            cursor: pointer;
+            @include padding;
+            margin-top: 15px;
+            color: $rojo;
+            font-weight: 700;
+            text-decoration: underline;
+        }
         .tour-div-hiden{
             display: none;
         }
@@ -111,23 +119,3 @@
     }
     
 }
-
-/*
-.tour-details{
-            margin-top: 15px;
-            @include padding;
-            //background-color: $rojo;
-            
-            .tour-summary{
-                cursor: pointer;
-                list-style: none;
-                display: inline;
-                min-width: 100px;
-                p{
-                    color: $rojo;
-                    text-decoration: underline;
-                    font-weight: 700;
-                }
-            }
-        }
-*/
