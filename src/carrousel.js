@@ -61,16 +61,27 @@ function handleTourBtn (){
 
     const tourBtn = document.querySelector(".tour-btn")
     const tourDiv = document.querySelector(".tour-div")
-
+    tourBtn.innerHTML = "See more"
     if(tourDiv.classList.contains("tour-div-hiden")){
-        tourBtn.innerHTML = "Ver más +"
+        console.log("contiene tour-div-hiden")
+        tourBtn.innerHTML = "X"
         tourDiv.classList.remove("tour-div-hiden")
     }else{
-        tourBtn.innerHTML = "Ver menos -"
+        console.log("no contiene tour-div-hiden")
+        tourBtn.innerHTML = "See more"
         tourDiv.classList.add("tour-div-hiden")
     }
 }
 
+// POR DEFECTO
+div.innerHTML = "";
+console.log("Punto 1 contiene la clase activo")
+const clone = template1.cloneNode(true);
+fragment.appendChild(clone);
+div.appendChild(fragment);
+
+const tourBtn = document.querySelector(".tour-btn")
+tourBtn.addEventListener("click", handleTourBtn)
 
 
 punto.forEach( (cadaPunto) =>{
