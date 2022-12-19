@@ -1332,11 +1332,11 @@ p {
 }
 .contains-call .call .button {
   border: none;
-  padding: 5px 10px;
+  padding: 10px 20px;
   background-color: #CE1212;
   color: #FFF;
   font-family: "Unbounded", cursive;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
 }
