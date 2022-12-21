@@ -7,6 +7,9 @@
 $blanco: #FFF;
 $beige: #EEEBDD;
 $amarillo: #F9D366;
+
+$verde: #12CECE;
+
 $rojo: #CE1212;
 $bordo: #810000;
 $negro: #1B1717;
@@ -25,7 +28,7 @@ $negro: #1B1717;
 @mixin btn {
     border: none;
     padding: 10px 20px;
-    background-color: $rojo;
+    background-color: $verde;
     color: $blanco;
     font-family: 'Unbounded', cursive;
     font-size: 1.5rem;
@@ -36,7 +39,7 @@ $negro: #1B1717;
 @mixin btn-s {
     border: none;
     padding: 5px 10px;
-    background-color: $rojo;
+    background-color: $verde;
     color: $blanco;
     font-family: 'Unbounded', cursive;
     font-size: 1rem;
