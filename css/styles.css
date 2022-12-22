@@ -1357,8 +1357,9 @@ p {
   flex-direction: column;
 }
 .contains-call .call .call-img {
-  width: 200px;
-  height: 200px;
+  width: 75px;
+  height: 75px;
+  margin: 30px 0px 15px;
   padding: 15px;
 }
 .contains-call .call h2 {
@@ -1378,6 +1379,7 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+  margin: 15px 0px;
 }
 .contains-call .call .button:hover {
   background-color: #6fddda;
