@@ -12,6 +12,7 @@
     .header1{
         @include flex-center;
         width: 90%;
+        height: 100px;
         .header{
             @include width;
             @include padding;
@@ -21,7 +22,20 @@
             .header-logo{font-size: 1.5rem; font-weight: 600;}
             .header-links{
                 display: block;
-                a{text-decoration: none; color: $blanco;}
+                overflow-y: hidden;
+                a{
+                    color: $blanco;
+                    text-align: center;
+                    text-decoration: none;
+                    font-weight: 500;
+                    margin: 0px 15px;
+                    padding: 30px 15px;
+                    &:hover{
+                        color: $verde-claro;
+                        font-weight: 600;
+                        transition: all .5s ease;
+                    }
+                }
             }
             .header-menu{display: none;}
         }
@@ -32,7 +46,14 @@
         .header2-links{
             display: flex;
             flex-direction: column;
-
+            a{
+                color: $blanco;
+                text-align: center;
+                text-decoration: none;
+                font-weight: 500;
+                margin: 10px 15px;
+                
+            }
         }
     }
 }

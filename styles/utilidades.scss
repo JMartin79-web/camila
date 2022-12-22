@@ -8,11 +8,16 @@ $blanco: #FFF;
 $beige: #EEEBDD;
 $amarillo: #F9D366;
 
+$verde-claro: #ddf7f6 ;
+$verde-hover: #6fddda;
 $verde: #12CECE;
+$verde-fondo: rgba(7, 77, 77, 0.192);
+$verde-fondo-oscuro: rgba(2, 20, 20, 0.356);
 
 $rojo: #CE1212;
 $bordo: #810000;
 $negro: #1B1717;
+
 
 // TITULOS
 @mixin titleH1 {
@@ -34,6 +39,10 @@ $negro: #1B1717;
     font-size: 1.5rem;
     font-weight: 700;
     cursor: pointer;
+    &:hover{
+        background-color: $verde-hover;
+        transition: all .5s ease;
+    }
 }
 
 @mixin btn-s {

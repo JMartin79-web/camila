@@ -46,6 +46,7 @@ li {
 }
 
 a {
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #FFF;
 }
@@ -945,6 +946,7 @@ p {
   justify-content: center;
   align-items: center;
   width: 90%;
+  height: 100px;
 }
 .contains-header .header1 .header {
   width: 100%;
@@ -960,10 +962,20 @@ p {
 }
 .contains-header .header1 .header .header-links {
   display: block;
+  overflow-y: hidden;
 }
 .contains-header .header1 .header .header-links a {
-  text-decoration: none;
   color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0px 15px;
+  padding: 30px 15px;
+}
+.contains-header .header1 .header .header-links a:hover {
+  color: #ddf7f6;
+  font-weight: 600;
+  transition: all 0.5s ease;
 }
 .contains-header .header1 .header .header-menu {
   display: none;
@@ -974,6 +986,13 @@ p {
 .contains-header .header2 .header2-links {
   display: flex;
   flex-direction: column;
+}
+.contains-header .header2 .header2-links a {
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 10px 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1019,6 +1038,14 @@ p {
   z-index: 1;
   overflow: hidden;
 }
+.contains-hero .hero-img .hero-img-filter {
+  background: linear-gradient(rgba(2, 20, 20, 0.356), rgba(7, 77, 77, 0.192)), url("./../../assets/fotos/hero_img.jpg");
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+  padding: 0;
+  position: absolute;
+}
 .contains-hero .hero-img img {
   display: block;
   object-fit: contain;
@@ -1041,9 +1068,11 @@ p {
   font-size: 3rem;
   color: #FFF;
 }
-.contains-hero .hero p {
-  color: #FFF;
+.contains-hero .hero .hero-p {
   padding: 15px;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 .contains-hero .hero .button {
   border: none;
@@ -1054,6 +1083,10 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+}
+.contains-hero .hero .button:hover {
+  background-color: #6fddda;
+  transition: all 0.5s ease;
 }
 
 .contains-about {
@@ -1339,6 +1372,10 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+}
+.contains-call .call .button:hover {
+  background-color: #6fddda;
+  transition: all 0.5s ease;
 }
 
 .contains-footer {

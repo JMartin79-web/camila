@@ -10,6 +10,17 @@
         position: absolute;
         z-index: 1;
         overflow: hidden;
+        .hero-img-filter{
+            background:
+                linear-gradient($verde-fondo-oscuro, $verde-fondo),
+                url("./../../assets/fotos/hero_img.jpg")    
+            ;
+            width: 100%;
+            height: 100vh;
+            max-height: 1080px;
+            padding: 0;
+            position: absolute;
+        }
         img{
             display: block;
             object-fit: contain;
@@ -25,7 +36,13 @@
         height: 100vh;
         max-height: 1080px;
         h1{ @include titleH1; color: $blanco;}
-        p{color: $blanco; @include padding;}
+        .hero-p{
+            @include padding;
+            color: $blanco;
+            font-weight: 500;
+            font-size: 1.5rem
+            
+        }
         .button{
             @include btn;
         }

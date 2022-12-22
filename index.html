@@ -18,9 +18,9 @@
                     <!-- <a href="#">CAMILA</a> -->
                 </div>
                 <div class="header-links">
-                    <a href="#">link</a>
-                    <a href="#">link</a>
-                    <a href="#">link</a>
+                    <a href="#about">About</a>
+                    <a href="#tours">Tours</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <div class="header-menu">
                     <button onclick="handleToggle()" class="hamburger hamburger--squeeze" type="button">
@@ -34,9 +34,9 @@
         
         <div id="header2" class="header2">
             <div class="header2-links">
-                <a href="#">link</a>
-                <a href="#">link</a>
-                <a href="#">link</a>
+                <a href="#about">About</a>
+                <a href="#tours">Tours</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
 
@@ -45,11 +45,12 @@
     <!-- HERO SECTIO -->
     <div class="contains-hero">
         <div class="hero-img">
-            <img src="./assets/fotos/hero_img.jpg" alt="mendoza">
+            <div class="hero-img-filter"></div>
+            <!-- <img src="./assets/fotos/hero_img.jpg" alt="mendoza"> -->
         </div>
         <section class="hero">
             <h1>LOGO</h1>
-            <p>Let´s explore the city together!</p>
+            <p class="hero-p">Let´s explore the city together!</p>
             <button class="button"><a href="#" target="_blank">BOOK NOW</a></button>
         </section>
     </div>
@@ -57,7 +58,7 @@
     <!-- ABOUT SECTIO -->
     <div class="contains-about">
         <section class="about">
-            <div class="about-title">
+            <div class="about-title" id="about">
                 <h2>Hi! I´m Cami, your guide ;)</h2>
             </div>
             <div class="about-img">
@@ -79,7 +80,7 @@
             </div>
             <div class="title-txt">
                 
-                <h2>Our tours  
+                <h2 id="tours">Our tours  
                     <div class="contains-magia">
                         <div class="magia">
                             <img src="./assets/fotos/magia.png">
@@ -137,7 +138,7 @@
     <div class="contains-call">
         <section class="call">
             <img class="call-img" src="./assets/fotos/maiga-title.png" alt="magic title">
-            <h2>Let´s make it happen!</h2>
+            <h2 id="contact">Let´s make it happen!</h2>
             <p>We'll make sure it's your best trip ever. Contact me!</p>
             <button class="button"><a href="#" target="_blank">BOOK NOW</a></button>
         </section>
