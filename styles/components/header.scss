@@ -58,6 +58,14 @@
     }
 }
 
+.header-open{
+    padding-bottom: 15px;
+    animation-name: bg-header;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    background-color: $rojo;
+    transition: step-end 0.5 ease;
+}
 
 // RESPONSIVE
 @media screen and (max-width: 768px) {

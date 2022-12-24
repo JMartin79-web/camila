@@ -22,7 +22,7 @@ $negro: #1B1717;
 // TITULOS
 @mixin titleH1 {
     font-family: 'Unbounded', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 @mixin titleH2 {
     font-family: 'Unbounded', cursive;
@@ -109,4 +109,9 @@ $negro: #1B1717;
         width: 18px;
         height: 18px;
     }
+}
+
+@keyframes bg-header {
+    0%{ background-color: transparent;}
+    100%{ background-color: $rojo;}
 }

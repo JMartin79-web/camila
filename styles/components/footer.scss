@@ -3,7 +3,30 @@
     @include flex-center;
     background-color: $bordo;
     .footer{
+        @include flex-center;
         @include width;
         @include flex-center;
+        @include padding;
+        .footer-div1{
+            width: 60%;
+            .footer-p{color: $blanco;; text-align: center;}
+        }
+        .footer-div2{
+            width: 40%;
+            h2{
+                color: $blanco;
+                text-align: center;
+                font-family: 'Unbounded', cursive;
+                font-weight: 400;
+                font-size: .8rem;
+            }
+        }
+        .footer-separation{
+            width: 1px;
+            height: 100%;
+            min-height: 50px;
+            margin: 15px;
+            background-color: $blanco;
+        }
     }
 }

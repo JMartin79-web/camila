@@ -34,9 +34,9 @@
         
         <div id="header2" class="header2">
             <div class="header2-links">
-                <a href="#about">About</a>
-                <a href="#tours">Tours</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" onclick=handleToggle()>About</a>
+                <a href="#tours" onclick=handleToggle()>Tours</a>
+                <a href="#contact" onclick=handleToggle()>Contact</a>
             </div>
         </div>
 
@@ -49,7 +49,7 @@
             <img src="./assets/fotos/hero_img.jpg" alt="mendoza">
         </div>
         <section class="hero">
-            <h1>LOGO</h1>
+            <h1>Your friend in<br>Mendoza</h1>
             <p class="hero-p">Let´s explore the city together!</p>
             <button class="button">
                 <a href='https://api.whatsapp.com/send/?phone=5492612478164&text&app_absent=0' target="_blank">BOOK NOW</a>
@@ -66,7 +66,7 @@
             <div class="about-img">
                 <img src="./assets/fotos/perfil.jpg" alt="perfil">
             </div>
-            <p>Hi, I'm Cami, I'm 22 years old and I'm your travel assistant in Mendoza. My goal is to take care of you during your stay and give you complete attention so you can have the time of your life in this beautiful province!
+            <p class="about-p">Hi, I'm Cami, I'm 22 years old and I'm your travel assistant in Mendoza. My goal is to take care of you during your stay and give you complete attention so you can have the time of your life in this beautiful province!
             <br>
             Team up with me and receive recommendations that only locals know, full attention to all your needs during your trip and the best tours put together by me!
             </p>
@@ -75,11 +75,13 @@
 
     <!-- CARROUSEL SECTION -->
     <div class="contains-carrousel">
+        
         <div class="carrousel-title">
             <div class="bg-div-title">
                 <div class="bg-title"></div>
                 <div class="bg-title"></div>
             </div>
+            
             <div class="title-txt">
                 
                 <h2 id="tours">Our tours  
@@ -93,12 +95,29 @@
             </div>
         </div>
         
+        <!--
+
+
+         -->
+
+        
         <div class="carrousel-div">
             <div class="carrousel">
                 <div class="grande">
-                    <img src="#" alt="Imagen 1" class="img">
-                    <img src="#" alt="Imagen 2" class="img">
-                    <img src="#" alt="Imagen 3" class="img">
+
+                     
+                    <div class="carrousel-div-img">
+                        <img src="./assets/fotos/tour1.jpg" alt="Imagen 1" class="img">
+                    </div>
+
+                    <div class="carrousel-div-img">
+                        <img src="./assets/fotos/tour2.png" alt="Imagen 2" class="img">
+                    </div>
+
+                    <div class="carrousel-div-img">
+                        <img src="./assets/fotos/tour3.png" alt="Imagen 3" class="img">
+                    </div>
+                    
                 </div>
         
                 <div class="contains-puntos">
@@ -117,7 +136,7 @@
 
         </div>
     </div>
-
+    
     <!-- PLUS -->
     <div class="contains-plus">
         <div class="plus">
@@ -154,7 +173,22 @@
     <!-- FOOTER -->
     <div class="contains-footer">
         <footer class="footer">
-            <h2>footer</h2>
+
+            <div class="footer-div1">
+                <p class="footer-p">
+                    Thank you for visiting
+                    <br>
+                    mailto:yourfriendinmendoza@gmail.com
+                </p>
+            </div>
+            
+            <div class="footer-separation"></div>
+            
+            <div class="footer-div2">
+                <h2>Your friend in<br>Mendoza</h2>
+                
+            </div>
+            
         </footer>
     </div>
 
@@ -171,13 +205,21 @@
                 <p>Schedule: 8 am to 18 pm</p>
                 <br>
                 <p>After picking you up at your hotel, we start the tour heading to the "Bodega Rural" wine museum, a must on your visit to the city.
-                    <br>
+                    <br><br>
                     We continue to the famous LAUR olive grove, ranked number 1 in the world and a pioneer in the establishment of olive groves in the province of Mendoza as well as in the production of olive oil.
-                    <br>
+                    <br><br>
                     After lunch, we continue to the "Bodega Chandon" where sparkling wines are produced. And we finish the tour at the Budeguer winery, where some of the best wines in the country are produced and harvested.
-                    <br>
-                    At all points of the tour, you will enjoy tastings, historical explanations of the places, and beautiful views to relax and enjoy the day. 
+                    <br><br>
+                    At all points of the tour, you will enjoy tastings, historical explanations of the places, and beautiful views to relax and enjoy the day.
+                    <br><br>
                     At the end of the tour, we make sure you arrive safely back to your hotel. </p>
+                
+                <div class="tour-galery">
+                    <div class="tour-img"><img src="./assets/fotos/tour1/Dribbble_shot-1tour1.jpg" alt=""></div>
+                    <div class="tour-img"><img src="./assets/fotos/tour1/Dribbble_shot-2tour1.png" alt=""></div>
+                    <div class="tour-img"><img src="./assets/fotos/tour1/Dribbble_shot-3tour1.png" alt=""></div>
+                    <div class="tour-img"><img src="./assets/fotos/tour1/Dribbble_shot-4tour1.png" alt=""></div>
+                </div>
             </div>
         </div>
         
@@ -190,7 +232,13 @@
             <h2>Tour #2: High Mountain</h2>
             <p class="tour-btn" >See more</p>
             <div class="tour-div tour-div-hiden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni temporibus vitae eos cupiditate libero deserunt quos nobis ipsa. Pariatur consectetur facilis asperiores quam, amet deserunt adipisci at illum explicabo a?</p>
+                <p>After picking you up at your hotel, we start our tour in the direction of Aconcagua Park, a protected area in the Argentinean Andes, on the border with Chile. There you will find Mount Aconcagua, whose summit is covered with snow and which is one of the highest in South America - you will enjoy spectacular views while trekking!
+                <br><br>
+                We will continue walking through Uspallata, a town of enormous cultural value and with postcard views everywhere. The real charm of the town lies in its surroundings, which offer a wide range of outdoor activities, ideal for adventure and outdoor enthusiasts!
+                <br><br>
+                After lunch, we continue with a visit to the Inca bridge. Declared a cultural heritage site, its geological, scenic and historical value make it an important feature of the cultural identity of this region of the Central Andes.
+                <br><br>
+                We will end the trip with a visit to the Christ of the Redeemer, and we´ll make sure you arrive safely back to your hotel. </p>
             </div>
         </div>
         
@@ -203,10 +251,11 @@
             <div class="tour-div tour-div-hiden">
                 <p>
                     After picking you up at your hotel, we start the tour in Tupungato, one of the most important places in Mendoza. We will continue along the "Camino de la Carrera" circuit that links Potrerillos and Tupungato, from the mountain range to the fertile valley. This offers the tourist an incredible multiplicity of landscapes: snowy peaks as a backdrop, pampas with cattle, cultivated areas and poplar groves that await the spring to display their green and silver.
-                    <br>
+                    <br><br>
                     We will reach Potrerillos, where the Potrerillos water mirror is located. The majesty of this setting, added to the beauty of the natural landscape, the pure air, the climate and the mountain environment, results in great tourist and recreational potential at an international level.
-                    <br>
-                    After lunch at the Hotel Potrerillos, you can choose whether to continue walking and relaxing on the grounds or take a kayak ride along the dam. 
+                    <br><br>
+                    After lunch at the Hotel Potrerillos, you can choose whether to continue walking and relaxing on the grounds or take a kayak ride along the dam.
+                    <br><br>
                     At the end of the tour, we make sure you arrive safely back to your hotel.</p>
             </div>
         </div>
