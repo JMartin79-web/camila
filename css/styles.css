@@ -62,7 +62,6 @@ a {
 p {
   font-family: "Montserrat", sans-serif;
   color: #1B1717;
-  text-align: center;
 }
 
 .contains-magia {
@@ -1418,6 +1417,7 @@ p {
 }
 .contains-call .call p {
   padding: 15px;
+  text-align: center;
 }
 .contains-call .call .button {
   border: none;

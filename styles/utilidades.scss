@@ -29,6 +29,11 @@ $negro: #1B1717;
     font-weight: 400;
 }
 
+// PARRAFOS
+@mixin p-center {
+    text-align: center;
+}
+
 // BUTTON
 @mixin btn {
     border: none;
