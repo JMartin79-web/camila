@@ -120,7 +120,7 @@
         }
 
         .tour-div{
-            @include padding;
+            @include padding-top;
             overflow-x: hidden;
             .tour-galery{
                 display: grid;

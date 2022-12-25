@@ -1301,7 +1301,7 @@ p {
   transition: all 0.5s ease;
 }
 #tour-info .tour .tour-div {
-  padding: 15px;
+  padding-top: 15px;
   overflow-x: hidden;
 }
 #tour-info .tour .tour-div .tour-galery {
