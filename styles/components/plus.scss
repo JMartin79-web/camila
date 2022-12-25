@@ -10,7 +10,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40%;
+            width: 45%;
             @include padding;
             background-color: $rojo;
 
@@ -45,7 +45,7 @@
 
         }
         .plus-txt{
-            width: 60%;
+            width: 55%;
             @include padding;
             p{color: $blanco;}
         }

@@ -1346,7 +1346,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 45%;
   padding: 15px;
   background-color: #CE1212;
 }
@@ -1380,7 +1380,7 @@ p {
   text-align: center;
 }
 .contains-plus .plus .plus-txt {
-  width: 60%;
+  width: 55%;
   padding: 15px;
 }
 .contains-plus .plus .plus-txt p {
@@ -1414,6 +1414,7 @@ p {
   font-family: "Unbounded", cursive;
   font-weight: 400;
   color: #CE1212;
+  text-align: center;
 }
 .contains-call .call p {
   padding: 15px;
