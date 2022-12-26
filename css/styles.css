@@ -1137,7 +1137,7 @@ p {
   justify-content: center;
   align-items: center;
   width: 300px;
-  padding: 30px 0px 15px;
+  padding: 50px 0px 0px;
   background-color: #CE1212;
 }
 .contains-about .about .about-title h2 {
@@ -1164,7 +1164,7 @@ p {
   border: solid 4px #810000;
 }
 .contains-about .about .about-p {
-  margin: 2% 0% 5%;
+  margin: 30px 0%;
 }
 
 .contains-carrousel {
@@ -1475,7 +1475,7 @@ p {
   width: 1px;
   height: 100%;
   min-height: 50px;
-  margin: 15px;
+  margin: 5px;
   background-color: #FFF;
 }
 

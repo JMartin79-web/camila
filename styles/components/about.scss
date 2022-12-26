@@ -11,7 +11,7 @@
         .about-title{
             @include flex-center;
             width: 300px;
-            padding: 30px 0px 15px;
+            padding: 50px 0px 0px;
             background-color: $rojo;
             h2{
                 @include titleH2;
@@ -36,7 +36,7 @@
         }
 
         .about-p{
-            margin: 2% 0% 5%;
+            margin: 30px 0%;
         }
     }
 }
