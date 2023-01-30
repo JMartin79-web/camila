@@ -1132,7 +1132,7 @@ p {
   padding-top: 0px;
   flex-direction: column;
 }
-.contains-about .about .about-title {
+.contains-about .about .about-contains-img .about-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1140,14 +1140,14 @@ p {
   padding: 50px 0px 0px;
   background-color: #CE1212;
 }
-.contains-about .about .about-title h2 {
+.contains-about .about .about-contains-img .about-title .about-tittle-h {
   font-family: "Unbounded", cursive;
   font-weight: 400;
   max-width: 90%;
   color: #FFF;
   text-align: center;
 }
-.contains-about .about .about-img {
+.contains-about .about .about-contains-img .about-img {
   width: 300px;
   height: 300px;
   border-bottom-left-radius: 50%;
@@ -1157,16 +1157,40 @@ p {
   justify-content: center;
   align-items: center;
 }
-.contains-about .about .about-img img {
+.contains-about .about .about-contains-img .about-img img {
   overflow: hidden;
   max-width: 200px;
   border-radius: 50%;
   border: solid 4px #810000;
 }
-.contains-about .about .about-p {
+.contains-about .about .about-contains-info .about-h {
+  display: none;
+  font-family: "Unbounded", cursive;
+  font-weight: 400;
+  max-width: 90%;
+  color: #CE1212;
+  text-align: center;
+}
+.contains-about .about .about-contains-info .about-p {
   margin: 30px 0%;
 }
 
+@media screen and (min-width: 768px) {
+  .contains-about .about {
+    flex-direction: row;
+    padding-bottom: 50px;
+  }
+  .contains-about .about .about-contains-img {
+    min-width: 350px;
+  }
+  .contains-about .about .about-contains-img .about-title .about-tittle-h {
+    display: none;
+  }
+  .contains-about .about .about-contains-info .about-h {
+    display: block;
+    text-align: start;
+  }
+}
 .contains-carrousel {
   width: 100%;
   display: flex;
