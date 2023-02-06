@@ -161,6 +161,9 @@
         .tour-div{
             @include padding-top;
             overflow-x: hidden;
+            .tour-schedule{
+                font-weight: 600;
+            }
             .tour-galery{
                 display: grid;
                 align-items: center;
@@ -173,7 +176,9 @@
                     overflow: hidden;
                     object-fit: cover;
                     object-position: center;
-                    img{width: 100%;}                 
+                    img{
+                        width: 100%;
+                    }                 
                 }
             }
 

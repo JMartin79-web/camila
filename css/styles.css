@@ -1358,6 +1358,9 @@ p {
   padding-top: 15px;
   overflow-x: hidden;
 }
+#tour-info .tour .tour-div .tour-schedule {
+  font-weight: 600;
+}
 #tour-info .tour .tour-div .tour-galery {
   display: grid;
   align-items: center;
