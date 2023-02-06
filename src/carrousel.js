@@ -20,7 +20,7 @@ punto.forEach( ( cadaPunto , i )=> {
 
         // MOVEMOS el grand
         grande.style.transform = `translateX(${ operacion }%)`
-
+        console.log("operacion: ", operacion)
         // Recorremos TODOS los punto
         punto.forEach( ( cadaPunto , i )=>{
             // Quitamos la clase ACTIVO a TODOS los punto
@@ -125,3 +125,205 @@ punto.forEach( (cadaPunto) =>{
     })
 })
 
+// HANDLE ARROWS
+
+const arrowBack = document.getElementById("flecha-atras")
+const arrowFront = document.getElementById("flecha-adelante")
+
+arrowBack.addEventListener("click", arrow =>{
+
+    // punto 3 a 2
+    if(punto3.classList.contains("activo")){
+        arrow.stopPropagation()
+        let operacion = -33.3
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto3.classList.remove('activo')
+        punto2.classList.add('activo')
+
+        console.log("Punto 2 contiene la clase activo")
+        const clone = template2.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+            
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+    }
+    // punto 2 a 1
+    else if(punto2.classList.contains("activo")){
+        arrow.stopPropagation()
+        let operacion = -0
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto2.classList.remove('activo')
+        punto1.classList.add('activo')
+
+        console.log("Punto 1 contiene la clase activo")
+        const clone = template1.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+            
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+    }
+
+    // punto 1 a 3
+    else{
+        arrow.stopPropagation()
+        let operacion = -66.6
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto1.classList.remove('activo')
+        punto3.classList.add('activo')
+
+        console.log("Punto 3 contiene la clase activo")
+        const clone = template3.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+        
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+    }
+    
+})   
+
+
+arrowFront.addEventListener("click", arrow =>{
+
+    // punto 1 a 2
+    if(punto1.classList.contains("activo")){
+        arrow.stopPropagation()
+        let operacion = -33.3
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto1.classList.remove('activo')
+        punto2.classList.add('activo')
+
+        console.log("Punto 2 contiene la clase activo")
+        const clone = template2.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+            
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+    }
+    // punto 2 a 3
+    else if(punto2.classList.contains("activo")){
+        arrow.stopPropagation()
+        let operacion = -66.6
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto2.classList.remove('activo')
+        punto3.classList.add('activo')
+
+        console.log("Punto 3 contiene la clase activo")
+        const clone = template3.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+            
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+    }
+
+    // punto 3 a 1
+    else{
+        arrow.stopPropagation()
+        let operacion = -0
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto3.classList.remove('activo')
+        punto1.classList.add('activo')
+
+        console.log("Punto 1 contiene la clase activo")
+        const clone = template1.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+        
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+    }
+    
+})   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    /*
+    // punto 3 a 2
+    if(punto3.classList.contains("activo")){
+        arrow.stopPropagation()
+        let operacion = -33.3
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto3.classList.remove('activo')
+        punto2.classList.add('activo')
+
+        console.log("Punto 2 contiene la clase activo")
+        const clone = template2.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+            
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+    }
+
+    // punto 2 a 1
+    if(punto2.classList.contains("activo")){
+        arrow.stopPropagation()
+        let operacion = -0
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto2.classList.remove('activo')
+        punto1.classList.add('activo')
+
+        console.log("Punto 1 contiene la clase activo")
+        const clone = template1.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+            
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+
+    }
+
+    // punto 1 a 3
+    if(punto1.classList.contains("activo")){
+        arrow.stopPropagation()
+        let operacion = -66.6
+        grande.style.transform =`translateX(${ operacion }%)`
+        div.innerHTML = "";
+
+        punto1.classList.remove('activo')
+        punto3.classList.add('activo')
+
+        console.log("Punto 3 contiene la clase activo")
+        const clone = template3.cloneNode(true);
+        fragment.appendChild(clone);
+        div.appendChild(fragment);
+        
+        const tourBtn = document.querySelector(".tour-btn")
+        tourBtn.addEventListener("click", handleTourBtn)
+
+    }
+
+    
+    */
