@@ -1372,11 +1372,11 @@ p {
   margin: 15px;
   height: 300px;
   overflow: hidden;
-  object-fit: cover;
-  object-position: center;
 }
 #tour-info .tour .tour-div .tour-galery .tour-img img {
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media screen and (max-width: 768px) {
