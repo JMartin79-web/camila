@@ -10,21 +10,25 @@
         @include flex-center;
         padding-top: 0px;
         flex-direction: column;
-
+        align-items: flex-start;
         .about-contains-img{
             display: flex;
+            flex-direction: row;
             align-items: center;
+
+            margin: 50px 0px 25px -15px;
             .about-rectangle{
                 @include flex-center;
-                width: 250px;
-                padding: 50px 0px 0px;
+                height: 250px;
+                width: 2%;
+                padding: 0px;
                 background-color: $rojo;
                 
             }
             .about-img{
                 width: 250px;
                 height: 250px;
-                border-bottom-left-radius: 50%;
+                border-top-right-radius: 50%;
                 border-bottom-right-radius: 50%;
                 background-color: $rojo;
                 @include flex-center;
@@ -41,7 +45,7 @@
                 height: 200px;
                 border-radius: 50%;
                 background-color: $rojo;
-                margin-top: 25px;
+                margin: 0 0 0 25px;
                 @include flex-center;
 
                 img{
@@ -93,7 +97,9 @@
             @include width;
             @include padding;
             @include flex-center;
+            
             padding-top: 0px;
+            flex-direction: row;
             padding-bottom: 50px;
 
             .about-contains-img{
@@ -101,53 +107,39 @@
                 flex-direction: column;
                 align-items: center;
                 min-width: 350px;
+                margin: 0px;
+
+                .about-img{
+                    width: 250px;
+                    border-top-right-radius: 0%;
+                    border-bottom-left-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    background-color: $rojo;
+                    @include flex-center;
+                    img{
+                        overflow: hidden;
+                        max-width: 200px;
+                        border-radius: 50%;
+                        border: solid 4px $bordo;
+                    }
+                }
+                .about-img2{
+                    margin: 25px 0 0 0;
+                }
 
                 .about-rectangle{
                     @include flex-center;
+                    height: 15px;
                     width: 250px;
                     padding: 50px 0px 0px;
+                    margin: 0;
                     background-color: $rojo;
                     
                 }
             }
 
-            .about-img{
-                width: 250px;
-                height: 250px;
-                border-bottom-left-radius: 50%;
-                border-bottom-right-radius: 50%;
-                background-color: $rojo;
-                @include flex-center;
-                img{
-                    overflow: hidden;
-                    max-width: 200px;
-                    border-radius: 50%;
-                    border: solid 4px $bordo;
-                }
-    
-            }
-            .about-img2{
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                background-color: $rojo;
-                margin-top: 25px;
-                @include flex-center;
-
-                img{
-                    overflow: hidden;
-                    max-width: 150px;
-                    border-radius: 50%;
-                    border: solid 4px $bordo;
-                }
-            }
-
-
-
             .about-contains-info{
-                .about-tittle-mobile{
-                    display: none;
-                }
+                .about-tittle-mobile{display: none;}
                 .about-h{
                     display: block;
                     text-align: start;
@@ -159,4 +151,38 @@
             }
         }
     }
+}
+
+// RESPONSIVE AJUSTE
+
+@media screen and (max-width: 480px){
+.contains-about{
+    .about{
+        .about-contains-img{
+            margin: 0 0 0 -15px;
+            .about-img{
+                width: 150px;
+                height: 150px;
+                img{
+                    max-width: 125px;
+                }
+            }
+
+            .about-img2{
+                width: 125px;
+                height: 125px;
+                margin: 0 0 0 15px;
+                img{
+                    max-width: 100px;
+                }
+            }
+
+            .about-rectangle{
+                width: 0%;
+            }
+
+        }
+    }
+}
+    
 }
