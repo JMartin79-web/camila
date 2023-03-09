@@ -13,7 +13,6 @@
 
         .about-contains-img{
             display: flex;
-            flex-direction: column;
             align-items: center;
             .about-rectangle{
                 @include flex-center;
@@ -87,15 +86,68 @@
 // RESPONSIVE
 @media screen and (min-width: 768px) {
     .contains-about{
+        width: 100%;
+        @include flex-center;
+        background-color: $beige;
         .about{
-            flex-direction: row;
+            @include width;
+            @include padding;
+            @include flex-center;
+            padding-top: 0px;
             padding-bottom: 50px;
+
             .about-contains-img{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 min-width: 350px;
+
+                .about-rectangle{
+                    @include flex-center;
+                    width: 250px;
+                    padding: 50px 0px 0px;
+                    background-color: $rojo;
+                    
+                }
             }
 
+            .about-img{
+                width: 250px;
+                height: 250px;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background-color: $rojo;
+                @include flex-center;
+                img{
+                    overflow: hidden;
+                    max-width: 200px;
+                    border-radius: 50%;
+                    border: solid 4px $bordo;
+                }
+    
+            }
+            .about-img2{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-color: $rojo;
+                margin-top: 25px;
+                @include flex-center;
+
+                img{
+                    overflow: hidden;
+                    max-width: 150px;
+                    border-radius: 50%;
+                    border: solid 4px $bordo;
+                }
+            }
+
+
+
             .about-contains-info{
-                .about-tittle-mobile{display: none;}
+                .about-tittle-mobile{
+                    display: none;
+                }
                 .about-h{
                     display: block;
                     text-align: start;

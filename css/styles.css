@@ -1134,7 +1134,6 @@ p {
 }
 .contains-about .about .about-contains-img {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 .contains-about .about .about-contains-img .about-rectangle {
@@ -1204,12 +1203,68 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  .contains-about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEBDD;
+  }
   .contains-about .about {
-    flex-direction: row;
+    width: 100%;
+    max-width: 1080px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
     padding-bottom: 50px;
   }
   .contains-about .about .about-contains-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-width: 350px;
+  }
+  .contains-about .about .about-contains-img .about-rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    padding: 50px 0px 0px;
+    background-color: #CE1212;
+  }
+  .contains-about .about .about-img {
+    width: 250px;
+    height: 250px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #CE1212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contains-about .about .about-img img {
+    overflow: hidden;
+    max-width: 200px;
+    border-radius: 50%;
+    border: solid 4px #810000;
+  }
+  .contains-about .about .about-img2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #CE1212;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contains-about .about .about-img2 img {
+    overflow: hidden;
+    max-width: 150px;
+    border-radius: 50%;
+    border: solid 4px #810000;
   }
   .contains-about .about .about-contains-info .about-tittle-mobile {
     display: none;
