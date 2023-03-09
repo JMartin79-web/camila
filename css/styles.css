@@ -1132,24 +1132,22 @@ p {
   padding-top: 0px;
   flex-direction: column;
 }
-.contains-about .about .about-contains-img .about-title {
+.contains-about .about .about-contains-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contains-about .about .about-contains-img .about-rectangle {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 250px;
   padding: 50px 0px 0px;
   background-color: #CE1212;
 }
-.contains-about .about .about-contains-img .about-title .about-tittle-h {
-  font-family: "Unbounded", cursive;
-  font-weight: 400;
-  max-width: 90%;
-  color: #FFF;
-  text-align: center;
-}
 .contains-about .about .about-contains-img .about-img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   background-color: #CE1212;
@@ -1163,13 +1161,43 @@ p {
   border-radius: 50%;
   border: solid 4px #810000;
 }
+.contains-about .about .about-contains-img .about-img2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #CE1212;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contains-about .about .about-contains-img .about-img2 img {
+  overflow: hidden;
+  max-width: 150px;
+  border-radius: 50%;
+  border: solid 4px #810000;
+}
+.contains-about .about .about-contains-info .about-tittle-mobile {
+  font-family: "Unbounded", cursive;
+  font-weight: 500;
+  max-width: 90%;
+  color: #CE1212;
+}
 .contains-about .about .about-contains-info .about-h {
   display: none;
   font-family: "Unbounded", cursive;
-  font-weight: 400;
+  font-weight: 500;
   max-width: 90%;
   color: #CE1212;
   text-align: center;
+}
+.contains-about .about .about-contains-info .about-h-big {
+  display: none;
+  font-family: "Unbounded", cursive;
+  font-weight: 500;
+  font-size: 2rem;
+  max-width: 90%;
+  color: #CE1212;
 }
 .contains-about .about .about-contains-info .about-p {
   margin: 30px 0%;
@@ -1183,10 +1211,14 @@ p {
   .contains-about .about .about-contains-img {
     min-width: 350px;
   }
-  .contains-about .about .about-contains-img .about-title .about-tittle-h {
+  .contains-about .about .about-contains-info .about-tittle-mobile {
     display: none;
   }
   .contains-about .about .about-contains-info .about-h {
+    display: block;
+    text-align: start;
+  }
+  .contains-about .about .about-contains-info .about-h-big {
     display: block;
     text-align: start;
   }
@@ -1232,7 +1264,7 @@ p {
 }
 .contains-carrousel .carrousel-title .title-txt h2 {
   font-family: "Unbounded", cursive;
-  font-weight: 400;
+  font-weight: 500;
   max-width: 100%;
   color: #FFF;
   text-align: center;
@@ -1339,7 +1371,7 @@ p {
 }
 #tour-info .tour h2 {
   font-family: "Unbounded", cursive;
-  font-weight: 400;
+  font-weight: 500;
   color: #CE1212;
 }
 #tour-info .tour .tour-btn {
@@ -1432,7 +1464,7 @@ p {
 }
 .contains-plus .plus .plus-title h2 {
   font-family: "Unbounded", cursive;
-  font-weight: 400;
+  font-weight: 500;
   color: #FFF;
   text-align: center;
 }
@@ -1469,7 +1501,7 @@ p {
 }
 .contains-call .call h2 {
   font-family: "Unbounded", cursive;
-  font-weight: 400;
+  font-weight: 500;
   color: #CE1212;
   text-align: center;
 }
