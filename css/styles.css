@@ -1229,7 +1229,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 350px;
+    min-width: 300px;
     margin: 0px;
   }
   .contains-about .about .about-contains-img .about-img {
@@ -1465,6 +1465,10 @@ p {
 }
 #tour-info .tour .tour-div .tour-schedule {
   font-weight: 600;
+}
+#tour-info .tour .tour-div .price {
+  font-weight: 600;
+  color: #CE1212;
 }
 #tour-info .tour .tour-div .tour-galery {
   display: grid;
