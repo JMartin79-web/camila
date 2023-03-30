@@ -1466,6 +1466,11 @@ p {
 #tour-info .tour .tour-div .tour-schedule {
   font-weight: 600;
 }
+#tour-info .tour .tour-div .tour-schedule-aclarations {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgba(27, 23, 23, 0.6509803922);
+}
 #tour-info .tour .tour-div .price {
   font-weight: 600;
   color: #CE1212;
@@ -1643,6 +1648,50 @@ p {
   min-height: 50px;
   margin: 5px;
   background-color: #FFF;
+}
+
+#btn-wsp {
+  position: fixed;
+  z-index: 100;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #0DC143;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#btn-wsp:hover {
+  transition: all 0.5s ease;
+  background-color: #FFF;
+}
+#btn-wsp:hover svg {
+  fill: #12CECE;
+}
+#btn-wsp svg {
+  margin-top: -2px;
+  height: 45px;
+  width: 45px;
+  fill: #FFF;
+}
+
+@media screen and (max-width: 768px) {
+  #btn-wsp {
+    bottom: 15px;
+    right: 15px;
+    /*
+    width:60px;
+    height:60px;
+    svg{
+        margin-top: -2px;
+        height: 35px;
+        width: 35px;
+    }
+    */
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
