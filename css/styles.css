@@ -1002,6 +1002,13 @@ p {
   font-weight: 500;
   margin: 10px 15px;
 }
+.contains-header .header2 .header2-links p {
+  color: #FFF;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin: 10px 15px;
+}
 
 .header-open {
   padding-bottom: 15px;
