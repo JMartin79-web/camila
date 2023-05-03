@@ -1,17 +1,24 @@
 .contains-footer{
     width: 100%;
-    @include flex-center;
+    @include flex-column-center;
     background-color: $bordo;
     .footer{
         @include flex-center;
         @include width;
-        @include flex-center;
         @include padding;
         .footer-div1{
-            width: 60%;
+            width: 70%;
             .footer-p{
                 color: $blanco;
                 text-align: center;
+                font-size: .7rem;
+            }
+            h2{
+                color: $blanco;
+                text-align: center;
+                font-family: 'Unbounded', cursive;
+                font-weight: 400;
+                font-size: 1rem;
             }
 
         }
@@ -24,7 +31,24 @@
                 font-weight: 400;
                 font-size: .8rem;
             }
+            
         }
+        
+        .footer-div3{
+            @include padding;
+            @include flex-center;
+            width: 30%;
+            a{
+                img{
+                    width: 50%;
+                    max-width: 100px;
+                    min-width: 50px;
+                    object-fit: contain;
+                }
+            }
+    
+        }
+
         .footer-separation{
             width: 1px;
             height: 100%;
@@ -33,4 +57,5 @@
             background-color: $blanco;
         }
     }
+
 }
