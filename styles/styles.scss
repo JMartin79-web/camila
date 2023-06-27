@@ -1,0 +1,37 @@
+// sass --watch styles/styles.scss css/styles.css
+
+// UTILIDADES
+@import "utilidades.scss";
+
+// GENERAL
+@import "general.scss";
+
+// LIBRERIA HAMBURGER
+@import "./hamburgers/hamburgers.scss";
+
+
+// COMPONENTS
+
+    // HEADER
+    @import "./components/header.scss";
+
+    // HERO
+    @import "./components/hero.scss";
+
+    // ABOUT
+    @import "./components/about.scss";
+
+    // CARROUSEL
+    @import "./components/carrousel.scss";
+
+    // PLUS
+    @import "./components/plus.scss";
+
+    // CALL
+    @import "./components/call.scss";
+
+    // FOOTER
+    @import "./components/footer.scss";
+
+    // BUTTON WSP
+    @import "./components/wsp-button.scss";
