@@ -1124,6 +1124,7 @@ p {
 
 .contains-about {
   width: 100%;
+  padding-top: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1147,19 +1148,20 @@ p {
   margin: 50px 0px 25px -15px;
 }
 .contains-about .about .about-contains-img .about-rectangle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*
+  @include flex-center;
   height: 250px;
   width: 2%;
   padding: 0px;
-  background-color: #CE1212;
+  background-color: $rojo;
+  */
+  display: none;
 }
 .contains-about .about .about-contains-img .about-img {
   width: 250px;
   height: 250px;
   border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-radius: 50%;
   background-color: #CE1212;
   display: flex;
   justify-content: center;
@@ -1241,7 +1243,6 @@ p {
   }
   .contains-about .about .about-contains-img .about-img {
     width: 250px;
-    border-top-right-radius: 0%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     background-color: #CE1212;
@@ -1259,14 +1260,15 @@ p {
     margin: 25px 0 0 0;
   }
   .contains-about .about .about-contains-img .about-rectangle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*
+    @include flex-center;
     height: 15px;
     width: 250px;
     padding: 50px 0px 0px;
     margin: 0;
-    background-color: #CE1212;
+    background-color: $rojo;
+    */
+    display: none;
   }
   .contains-about .about .about-contains-info .about-tittle-mobile {
     display: none;
@@ -1305,6 +1307,7 @@ p {
 }
 .contains-carrousel {
   width: 100%;
+  padding-top: 7vh;
   display: flex;
   justify-content: center;
   align-items: center;

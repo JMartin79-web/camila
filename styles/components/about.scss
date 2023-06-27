@@ -2,6 +2,7 @@
 // MOBILE
 .contains-about{
     width: 100%;
+    padding-top: 5vh;
     @include flex-center;
     background-color: $beige;
     .about{
@@ -18,18 +19,21 @@
 
             margin: 50px 0px 25px -15px;
             .about-rectangle{
+                /*
                 @include flex-center;
                 height: 250px;
                 width: 2%;
                 padding: 0px;
                 background-color: $rojo;
-                
+                */
+                display: none;
             }
             .about-img{
                 width: 250px;
                 height: 250px;
                 border-top-right-radius: 50%;
-                border-bottom-right-radius: 50%;
+                //border-bottom-right-radius: 50%;
+                border-radius: 50%;
                 background-color: $rojo;
                 @include flex-center;
                 img{
@@ -111,7 +115,7 @@
 
                 .about-img{
                     width: 250px;
-                    border-top-right-radius: 0%;
+                    //border-top-right-radius: 0%;
                     border-bottom-left-radius: 50%;
                     border-bottom-right-radius: 50%;
                     background-color: $rojo;
@@ -126,15 +130,16 @@
                 .about-img2{
                     margin: 25px 0 0 0;
                 }
-
                 .about-rectangle{
+                    /*
                     @include flex-center;
                     height: 15px;
                     width: 250px;
                     padding: 50px 0px 0px;
                     margin: 0;
                     background-color: $rojo;
-                    
+                    */
+                    display: none;
                 }
             }
 
