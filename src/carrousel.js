@@ -80,8 +80,8 @@ const clone = template1.cloneNode(true);
 fragment.appendChild(clone);
 div.appendChild(fragment);
 
-const tourBtn = document.querySelector(".tour-btn")
-tourBtn.addEventListener("click", handleTourBtn)
+//const tourBtn = document.querySelector(".tour-btn")
+//tourBtn.addEventListener("click", handleTourBtn)
 
 
 punto.forEach( (cadaPunto) =>{
@@ -94,8 +94,9 @@ punto.forEach( (cadaPunto) =>{
             fragment.appendChild(clone);
             div.appendChild(fragment);
             
-            const tourBtn = document.querySelector(".tour-btn")
-            tourBtn.addEventListener("click", handleTourBtn)
+            // PARA EL BOTON DE SEE MORE
+            //const tourBtn = document.querySelector(".tour-btn")
+            //tourBtn.addEventListener("click", handleTourBtn)
             
             
         }
@@ -107,8 +108,9 @@ punto.forEach( (cadaPunto) =>{
             fragment.appendChild(clone);
             div.appendChild(fragment);
             
-            const tourBtn = document.querySelector(".tour-btn")
-            tourBtn.addEventListener("click", handleTourBtn)
+            // PARA EL BOTON DE SEE MORE
+            //const tourBtn = document.querySelector(".tour-btn")
+            //tourBtn.addEventListener("click", handleTourBtn)
         }
         
         if(punto3.classList.contains("activo")){
@@ -118,14 +120,16 @@ punto.forEach( (cadaPunto) =>{
             fragment.appendChild(clone);
             div.appendChild(fragment);
             
-            const tourBtn = document.querySelector(".tour-btn")
-            tourBtn.addEventListener("click", handleTourBtn)
+            // PARA EL BOTON DE SEE MORE
+            //const tourBtn = document.querySelector(".tour-btn")
+            //tourBtn.addEventListener("click", handleTourBtn)
             
         }
     })
 })
 
 // HANDLE ARROWS
+/*
 
 const arrowBack = document.getElementById("flecha-atras")
 const arrowFront = document.getElementById("flecha-adelante")
@@ -251,6 +255,9 @@ arrowFront.addEventListener("click", arrow =>{
     
 })   
 
+
+
+*/
 
 
 

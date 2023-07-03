@@ -90,7 +90,7 @@
                             width:  1.5rem;
                             height: 1.5rem;
                             
-                            background-color: $rojo;
+                            background-color: $rosa;
                             transition: all .5s ease;
                         }
                     }
@@ -98,7 +98,7 @@
                         width:  1.5rem;
                         height: 1.5rem;
                         margin: 0rem 1.5rem;
-                        background-color: $rojo;
+                        background-color: $rosa;
                     }
 
                     // flechas
@@ -154,10 +154,12 @@
             font-weight: 700;
             text-decoration: underline;
         }
+        /* esto era para esconder el contenido con una clase y tener un boton de see more
         .tour-div-hiden{
             display: none;
             transition: all .5s ease;
         }
+        */
 
         .tour-div{
             @include padding-top;

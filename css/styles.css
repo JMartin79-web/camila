@@ -1434,14 +1434,14 @@ p {
 .contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .punto:hover {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #7e3314;
+  background-color: #8b3f47;
   transition: all 0.5s ease;
 }
 .contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .punto.activo {
   width: 1.5rem;
   height: 1.5rem;
   margin: 0rem 1.5rem;
-  background-color: #7e3314;
+  background-color: #8b3f47;
 }
 .contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .flecha {
   display: inline-block;
@@ -1476,6 +1476,12 @@ p {
   max-width: 1080px;
   padding: 15px;
   padding-top: 0;
+  /* esto era para esconder el contenido con una clase y tener un boton de see more
+  .tour-div-hiden{
+      display: none;
+      transition: all .5s ease;
+  }
+  */
 }
 #tour-info .tour h2 {
   font-family: "Libre Baskerville", serif;
@@ -1489,10 +1495,6 @@ p {
   color: #7e3314;
   font-weight: 700;
   text-decoration: underline;
-}
-#tour-info .tour .tour-div-hiden {
-  display: none;
-  transition: all 0.5s ease;
 }
 #tour-info .tour .tour-div {
   padding-top: 15px;
