@@ -129,7 +129,7 @@ punto.forEach( (cadaPunto) =>{
 })
 
 // HANDLE ARROWS
-/*
+
 
 const arrowBack = document.getElementById("flecha-atras")
 const arrowFront = document.getElementById("flecha-adelante")
@@ -150,9 +150,10 @@ arrowBack.addEventListener("click", arrow =>{
         const clone = template2.cloneNode(true);
         fragment.appendChild(clone);
         div.appendChild(fragment);
-            
-        const tourBtn = document.querySelector(".tour-btn")
-        tourBtn.addEventListener("click", handleTourBtn)
+        
+        // PARA EL BOTON DE SEE MORE
+        //const tourBtn = document.querySelector(".tour-btn")
+        //tourBtn.addEventListener("click", handleTourBtn)
     }
     // punto 2 a 1
     else if(punto2.classList.contains("activo")){
@@ -168,9 +169,11 @@ arrowBack.addEventListener("click", arrow =>{
         const clone = template1.cloneNode(true);
         fragment.appendChild(clone);
         div.appendChild(fragment);
-            
-        const tourBtn = document.querySelector(".tour-btn")
-        tourBtn.addEventListener("click", handleTourBtn)
+        
+        
+        // PARA EL BOTON DE SEE MORE
+        //const tourBtn = document.querySelector(".tour-btn")
+        //tourBtn.addEventListener("click", handleTourBtn)
     }
 
     // punto 1 a 3
@@ -188,8 +191,10 @@ arrowBack.addEventListener("click", arrow =>{
         fragment.appendChild(clone);
         div.appendChild(fragment);
         
-        const tourBtn = document.querySelector(".tour-btn")
-        tourBtn.addEventListener("click", handleTourBtn)
+        
+        // PARA EL BOTON DE SEE MORE
+        //const tourBtn = document.querySelector(".tour-btn")
+        //tourBtn.addEventListener("click", handleTourBtn)
     }
     
 })   
@@ -211,9 +216,10 @@ arrowFront.addEventListener("click", arrow =>{
         const clone = template2.cloneNode(true);
         fragment.appendChild(clone);
         div.appendChild(fragment);
-            
-        const tourBtn = document.querySelector(".tour-btn")
-        tourBtn.addEventListener("click", handleTourBtn)
+        
+        // PARA EL BOTON DE SEE MORE
+        //const tourBtn = document.querySelector(".tour-btn")
+        //tourBtn.addEventListener("click", handleTourBtn)
     }
     // punto 2 a 3
     else if(punto2.classList.contains("activo")){
@@ -229,9 +235,10 @@ arrowFront.addEventListener("click", arrow =>{
         const clone = template3.cloneNode(true);
         fragment.appendChild(clone);
         div.appendChild(fragment);
-            
-        const tourBtn = document.querySelector(".tour-btn")
-        tourBtn.addEventListener("click", handleTourBtn)
+        
+        // PARA EL BOTON DE SEE MORE
+        //const tourBtn = document.querySelector(".tour-btn")
+        //tourBtn.addEventListener("click", handleTourBtn)
     }
 
     // punto 3 a 1
@@ -249,15 +256,16 @@ arrowFront.addEventListener("click", arrow =>{
         fragment.appendChild(clone);
         div.appendChild(fragment);
         
-        const tourBtn = document.querySelector(".tour-btn")
-        tourBtn.addEventListener("click", handleTourBtn)
+        // PARA EL BOTON DE SEE MORE
+        //const tourBtn = document.querySelector(".tour-btn")
+        //tourBtn.addEventListener("click", handleTourBtn)
     }
     
 })   
 
 
 
-*/
+
 
 
 
