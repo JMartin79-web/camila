@@ -4,7 +4,7 @@
     width: 100%;
     padding-top: 5vh;
     @include flex-center;
-    background-color: $beige;
+    background-color: $blanco;
     .about{
         @include width;
         @include padding;
@@ -96,7 +96,7 @@
     .contains-about{
         width: 100%;
         @include flex-center;
-        background-color: $beige;
+        background-color: $blanco;
         .about{
             @include width;
             @include padding;

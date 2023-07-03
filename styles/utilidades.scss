@@ -13,13 +13,22 @@
 $rojo : #7e3314 ;
 $bordo : #532212 ;
 $rosa : #8b3f47 ;
+
 $verde : #5e7e2c ;
-$verdeoscuro : #4b4f1d ;
-$verdeclaro : #d9d9bf ;
+$verde-oscuro : #4b4f1d ;
+$verde-claro : #d9d9bf ;
+$verde-fondo: rgba(7, 77, 77, 0.192);
+$verde-fondo-oscuro: rgba(2, 20, 20, 0.356);
+$verde-wts: #0DC143;
+
+
 $amarillo : #f7b63f ;
-$amarillooscuro : #eba718 ;
-$amarilloclaro : #fac66d ;
+$amarillo-oscuro : #eba718 ;
+$amarillo-claro : #fac66d ;
+
 $negro : #030304 ;
+$negro-transparente: #03030494;
+
 $gris : #212121 ;
 $blanco : #f7f6f5 ;
 
@@ -28,11 +37,12 @@ $blanco : #f7f6f5 ;
 // TITULOS
 @mixin titleH1 {
     font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
     font-size: 2.5rem;
 }
 @mixin titleH2 {
     font-family: 'Libre Baskerville', serif;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 // PARRAFOS
@@ -51,7 +61,7 @@ $blanco : #f7f6f5 ;
     font-weight: 700;
     cursor: pointer;
     &:hover{
-        background-color: $verde-hover;
+        background-color: $verde-claro;
         transition: all .5s ease;
     }
 }
