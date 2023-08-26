@@ -38,6 +38,14 @@ export default function Home() {
     <>
       <Head>
         <title>Your friend in Mendoza</title>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NBLDKCL"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
       </Head>
       <main>
         {/* <!-- HEADER --> */}
