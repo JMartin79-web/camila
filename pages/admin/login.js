@@ -21,13 +21,13 @@ export default function AdminLogin() {
                 <label htmlFor="email" className='text-lg font-semibold'>
                     Email:
                 </label>
-                <input className='py-1 px-2 rounded-md border-2 border-solid border-slate-400 border-opacity-25 focus:border-tourBrown focus:outline-none' type="text" id="email" autoComplete='off' ref={emailRef} />
+                <input className='border-slate-400 border-opacity-25 focus:border-tourBrown' type="text" id="email" autoComplete='off' ref={emailRef} />
             </div>
             <div className='flex flex-col gap-2'>
                 <label htmlFor="password" className='text-lg font-semibold'>
                     Password:
                 </label>
-                <input className='py-1 px-2 rounded-md border-2 border-solid border-slate-400 border-opacity-25 focus:border-tourBrown focus:outline-none' type="password" id="password" ref={passwordRef} />
+                <input className='border-slate-400 border-opacity-25 focus:border-tourBrown' type="password" id="password" ref={passwordRef} />
             </div>
             <button type="submit" className='bg-tourBrown text-white font-bold py-2 my-2 rounded-md'>
                 Login

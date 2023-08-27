@@ -119,6 +119,24 @@ p {
   color: #030304;
 }
 
+/* Equivalent combined CSS class */
+input, textarea {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.375rem; /* You may adjust the value to match Tailwind's rounded-md */
+  border-width: 2px;
+  border-style: solid;
+  border-color: #7180965d; /* Adjust the color value as per your design */
+  outline: none; /* Remove default outline on focus */
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #7e3314; /* Adjust the color value as per your design */
+}
+
 .contains-magia {
   display: inline-flex;
   width: 18px;
