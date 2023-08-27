@@ -13,19 +13,13 @@ export default function useAuth() {
     const logout = () => signOut(auth)
 
     useEffect(() => {
-        // setIsLoading(true)
-        // const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
-        //     if (currentuser && pathname === '/admin-eng') {
-        //         return setIsLoading(false)
-        //     }
-        //     else if (currentuser && pathname === '/admin-port') {
-        //         return setIsLoading(false)
-        //     }
-        //     else if (currentuser) replace('/admin-dashboard')
-        //     else replace('/admin-login')
-        //     setTimeout(() => setIsLoading(false), 500)
-        // })
-        // return () => unsubscribe()
+        setIsLoading(true)
+        const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
+            if (currentuser) replace('/admin/dashboard')
+            else replace('/admin/login')
+            setTimeout(() => setIsLoading(false), 700)
+        })
+        return () => unsubscribe()
     }, [auth])
 
     return { login, logout, isLoading }
