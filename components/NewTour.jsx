@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { previewFile, mediaUpload } from '@/services/uploadToStorage'
 import { addToDataBase } from '@/services/addToDb'
 import { toast } from 'react-hot-toast'
+import UploadInput from './UploadInput'
 
 export default function NewTour({ collection }) {
     const formRef = useRef(null)
@@ -95,32 +96,7 @@ export default function NewTour({ collection }) {
                     </div>
                 ))}
 
-                <label
-                    className="flex flex-col items-center my-2 px-4 py-6 bg-white rounded-lg shadow-md tracking-wide border border-dashed border-blue cursor-pointer hover:bg-blue-500 hover:text-white"
-                >
-                    <svg
-                        className="w-8 h-8"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                    </svg>
-                    <span>Subir imágenes</span>
-                    <input type="file"
-                        className="hidden"
-                        multiple
-                        id="file-upload"
-                        accept=".jpg, .jpeg, .png, .webp"
-                        onChange={handleImgAdd}
-                    />
-                </label>
+                <UploadInput handleImgAdd={handleImgAdd} />
 
                 <center>
                     <button type='submit' className='bg-green-500 hover:bg-green-300 my-4 text-white px-4 py-2 rounded'>Agregar Tour</button>
