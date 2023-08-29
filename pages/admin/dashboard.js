@@ -4,6 +4,8 @@ import useAuth from '@/hooks/useAuth'
 import { getDataByOrder } from '@/services/getFromDb'
 import { Toaster } from 'react-hot-toast'
 import UpdateTour from '@/components/UpdateTour'
+import PageInformationEdit from '@/components/PageInformationEdit'
+import Flags from '@/components/Flags'
 
 export default function Dashboard({ data }) {
     const { logout, isLoading } = useAuth()
@@ -12,8 +14,17 @@ export default function Dashboard({ data }) {
         <Loading isLoading={isLoading} />
         <Toaster />
         <div className='min-h-screen bg-gray-100 text-black p-6'>
-            <button className='absolute right-4 top-2 bg-tourBrown text-white px-4 py-2 rounded hover:opacity-50' onClick={logout}>Logout</button>
+            <Flags style='flex gap-2' />
+
+            <button className='absolute right-4 top-2 bg-tourBrown text-white px-4 py-2 rounded hover:opacity-50'
+                onClick={logout}>
+                Logout
+            </button>
+
+            <PageInformationEdit collection='' />
+
             <section className='mt-8'>
+                <h2 className='text-lg font-semibold'>Tours:</h2>
                 {data?.map((tour) => (
                     <UpdateTour collection="tours"
                         title={tour.title}
@@ -27,6 +38,7 @@ export default function Dashboard({ data }) {
                     />
                 ))}
             </section>
+
             <center>
                 <NewTour collection='tours' />
             </center>

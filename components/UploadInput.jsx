@@ -2,7 +2,8 @@
 export default function UploadInput({ handleImgAdd }) {
     return (
         <label
-            className="flex flex-col items-center my-2 px-4 py-6 bg-white rounded-lg shadow-md tracking-wide border border-dashed border-blue cursor-pointer hover:bg-blue-500 hover:text-white"
+            className={`flex flex-col items-center my-2 px-4 py-6 bg-white rounded-lg shadow-md 
+            tracking-wide border border-dashed border-blue cursor-pointer hover:bg-green-500 hover:text-white`}
         >
             <svg
                 className="w-8 h-8"

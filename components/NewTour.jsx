@@ -40,11 +40,11 @@ export default function NewTour({ collection }) {
             imgUrls.push(url)
         }
         const promise = addToDataBase(collection, {
-            content: content?.current?.value,
+            content: content?.current?.value.split('\n').join('<br/>'),
             title: title?.current?.value,
-            price: price?.current?.value,
+            price: price?.current?.value.split('\n')?.join('<br/>'),
             schedule: time?.current?.value,
-            moreInfo: moreInfo?.current?.value,
+            moreInfo: moreInfo?.current?.value?.split('\n')?.join('<br/>'),
             images: imgUrls
         })
         toast.promise(promise, {
@@ -60,8 +60,8 @@ export default function NewTour({ collection }) {
     }
 
     return (
-        <form className='flex flex-col gap-4' ref={formRef} onSubmit={handleSubmit}>
-            <h2>Nuevo Tour:</h2>
+        <form className='flex flex-col gap-4 w-1/2' ref={formRef} onSubmit={handleSubmit}>
+            <h2 className='text-lg font-semibold text-left'>Nuevo Tour:</h2>
             <input ref={title}
                 className=''
                 placeholder='Tour'
@@ -73,16 +73,18 @@ export default function NewTour({ collection }) {
                 required
             />
             <textarea ref={content}
-                placeholder={`Informacion de Tour (En caso de necesitar bajar de linea coloque un "<p></p>")`}
+                placeholder={`Informacion de Tour`}
                 rows={8}
-                required></textarea>
-            <input className=''
+                required>
+            </textarea>
+            <textarea ref={price}
                 placeholder='Precio'
-                ref={price}
-                required />
+                rows={2} required>
+            </textarea>
             <textarea ref={moreInfo}
-                placeholder={`Mas Informacion (optional) (En caso de necesitar bajar de linea coloque un "<p></p>")`}
-                rows={6}></textarea>
+                placeholder={`Mas Informacion (optional)`}
+                rows={6}>
+            </textarea>
             <div>
                 {previewImgs?.map(({ name, img }) => (
                     <div key={name} className='relative w-fit'>
@@ -99,7 +101,9 @@ export default function NewTour({ collection }) {
                 <UploadInput handleImgAdd={handleImgAdd} />
 
                 <center>
-                    <button type='submit' className='bg-green-500 hover:bg-green-300 my-4 text-white px-4 py-2 rounded'>Agregar Tour</button>
+                    <button type='submit' className='bg-green-500 hover:bg-green-300 my-4 text-white px-4 py-2 rounded'>
+                        Guardar Tour
+                    </button>
                 </center>
             </div>
         </form>
