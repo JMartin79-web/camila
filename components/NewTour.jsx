@@ -60,7 +60,7 @@ export default function NewTour({ collection }) {
     }
 
     return (
-        <form className='flex flex-col gap-4 w-1/2' ref={formRef} onSubmit={handleSubmit}>
+        <form className='flex flex-col gap-4 sm:w-1/2' ref={formRef} onSubmit={handleSubmit}>
             <h2 className='text-lg font-semibold text-left'>Nuevo Tour:</h2>
             <input ref={title}
                 className=''
@@ -88,7 +88,7 @@ export default function NewTour({ collection }) {
             <div>
                 {previewImgs?.map(({ name, img }) => (
                     <div key={name} className='relative w-fit'>
-                        <img className='my-2 rounded' src={img} alt='' />
+                        <img className='my-2 rounded max-w-[500px]' src={img} alt='' />
                         <button type='button'
                             onClick={() => deleteImg(name)}
                             className='bg-red-600 text-white px-4 py-2 rounded hover:opacity-50 my-2 absolute top-2 right-3'

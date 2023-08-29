@@ -134,13 +134,13 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
                             >
                                 Eliminar
                             </button>
-                            <img className='' src={src} alt='' />
+                            <img className='max-w-[500px] rounded' src={src} alt='' />
                         </div>
                     ))}
 
                     {previewImgs?.map(({ name, img }) => (
                         <div key={name} className='relative w-fit'>
-                            <img className='' src={img} alt='' />
+                            <img className='max-w-[500px] rounded' src={img} alt='' />
                             <button type='button'
                                 onClick={() => deleteImg(name)}
                                 className='bg-red-600 text-white px-4 py-2 rounded hover:opacity-50 absolute top-2 right-3'>
