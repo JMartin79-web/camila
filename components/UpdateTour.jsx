@@ -65,7 +65,7 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
             moreInfo: moreInfoRef?.current?.value?.split('\n')?.join('<br/>'),
             images: [...imagesUrl, ...imgUrls]
         })
-        toast.promise(promise, {
+        await toast.promise(promise, {
             loading: 'Applicando cambios',
             success: 'Actaulizacion Finalizada',
             error: 'Hubo un error intente mas tarde!',
@@ -85,10 +85,10 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
                 <button type='button'
                     className='flex items-center bg-white text-black px-4 pt-2 border-slate-300 w-fit border-2 rounded hover:opacity-50'
                     onClick={toggle}>{!boolValue ?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="6 9 12 15 18 9" />
                         </svg> :
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="18 15 12 9 6 15" />
                         </svg>
                     }
@@ -96,7 +96,7 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
                 <button className='bg-green-500 text-white px-4 py-2 w-fit rounded hover:opacity-50' type='submit'>
                     <p className='hidden sm:block text-white'>Guardar Cambios</p>
                     <span className='sm:hidden'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z" />
                             <path d="M17 3V12H7V3" />
                             <path d="M7 21V16H17V21" />

@@ -7,9 +7,11 @@ import Tour from "@/components/Tour"
 import Carrousel from "@/components/Carrousel"
 import { useEffect, useState } from "react"
 import { getDataByOrder } from "@/services/getFromDb"
+import useToggle from "@/hooks/useToggle"
 
 export default function Home({ tours, tourCarrouselImages }) {
   const [activeDot, setActiveDot] = useState(0)
+  const { boolValue: openNav, toggle } = useToggle(false)
 
   useEffect(() => {
     // Google Tag Manager script
@@ -51,10 +53,10 @@ export default function Home({ tours, tourCarrouselImages }) {
       </Head>
       <main>
         {/* <!-- HEADER --> */}
-        <div className="contains-header" id="header">
+        <div className={`contains-header ${openNav ? 'header-open' : ''}`} id="header">
 
           <div className="header1">
-            <header className="header">
+            <header className={`header`}>
               <div className="header-logo">
                 {/* <!-- <a href="#">CAMILA</a> --> */}
               </div>
@@ -64,7 +66,7 @@ export default function Home({ tours, tourCarrouselImages }) {
                 <a href="#contact">Contact</a>
               </div>
               <div className="header-menu">
-                <button className="hamburger hamburger--squeeze" type="button">
+                <button onClick={toggle} className={`hamburger hamburger--squeeze ${openNav ? 'is-active' : ''}`} type="button">
                   <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
                   </span>
@@ -73,7 +75,7 @@ export default function Home({ tours, tourCarrouselImages }) {
             </header>
           </div>
 
-          <div id="header2" className="header2">
+          <div id="header2" className={`header2 ${openNav ? 'header2-active' : ''}`}>
             <div className="header2-links">
               <a href="#about">About</a>
               <a href="#tours">Tours</a>
