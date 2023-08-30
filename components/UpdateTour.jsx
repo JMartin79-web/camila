@@ -60,9 +60,9 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
         const promise = updateValues(collection, id, {
             title: titleRef?.current?.value,
             schedule: scheduleRef?.current?.value,
-            content: content?.current?.value.split('\n').join('<br/>'),
+            content: contentRef?.current?.value.split('\n').join('<br/>'),
             price: priceRef?.current?.value.split('\n')?.join('<br/>'),
-            moreInfo: moreInfo?.current?.value?.split('\n')?.join('<br/>'),
+            moreInfo: moreInfoRef?.current?.value?.split('\n')?.join('<br/>'),
             images: [...imagesUrl, ...imgUrls]
         })
         toast.promise(promise, {
