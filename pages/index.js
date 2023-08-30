@@ -5,10 +5,11 @@ import magicTitle from "../assets/fotos/maiga-title.png"
 import Image from "next/image"
 import Tour from "@/components/Tour"
 import Carrousel from "@/components/Carrousel"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { getDataByOrder } from "@/services/getFromDb"
 
 export default function Home({ tours, tourCarrouselImages }) {
+  const [activeDot, setActiveDot] = useState(0)
 
   useEffect(() => {
     // Google Tag Manager script
@@ -101,7 +102,11 @@ export default function Home({ tours, tourCarrouselImages }) {
         </div>
 
         {/* <!-- CARROUSEL SECTION --> */}
-        <Carrousel images={tourCarrouselImages} />
+        <Carrousel
+          images={tourCarrouselImages}
+          activeDot={activeDot}
+          setActiveDot={setActiveDot}
+        />
 
         <div id="tour-info">
           {tours?.map(tour => (
