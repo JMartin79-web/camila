@@ -206,7 +206,7 @@ import magic from "../assets/fotos/magia.png"
 
 // })   
 
-export default function Carrousel() {
+export default function Carrousel({ images }) {
     return (
         <div className="contains-carrousel">
 
@@ -233,36 +233,26 @@ export default function Carrousel() {
                 <div className="carrousel">
                     <div className="grande">
 
-
-                        <div className="carrousel-div-img">
-                            <Image width={'100%'} height={'100%'} src={img1} alt="Imagen 1" className="img" />
-                        </div>
-
-                        <div className="carrousel-div-img">
-                            <Image width={'100%'} height={'100%'} src={img2} alt="Imagen 2" className="img" />
-                        </div>
-
-                        <div className="carrousel-div-img">
-                            <Image width={'100%'} height={'100%'} src={img3} alt="Imagen 3" className="img" />
-                        </div>
+                        {images?.map((src, index) => (
+                            <div className="carrousel-div-img" key={src}>
+                                <img width={'100%'} height={'100%'} src={src} alt={`Imagen ${index}`} className="img" />
+                            </div>
+                        ))}
 
                     </div>
 
                     <div className="contains-puntos">
                         <ul className="puntos">
                             <li id="flecha-atras" className="flecha"></li>
-                            <li id="punto1" className="punto activo"></li>
-                            <li id="punto2" className="punto"></li>
-                            <li id="punto3" className="punto"></li>
+                            {images?.map((src, index) => (
+                                <li key={src + index} id={`punto${index + 1}`} className={`punto`}></li>
+                            ))}
+                            {/* <li id="punto2" className="punto activo"></li>
+                            <li id="punto3" className="punto"></li> */}
                             <li id="flecha-adelante" className="flecha"></li>
                         </ul>
                     </div>
-
                 </div>
-
-            </div>
-
-            <div id="tour-info">
 
             </div>
         </div>

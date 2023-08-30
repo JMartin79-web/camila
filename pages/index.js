@@ -6,8 +6,9 @@ import Image from "next/image"
 import Tour from "@/components/Tour"
 import Carrousel from "@/components/Carrousel"
 import { useEffect } from "react"
+import { getDataByOrder } from "@/services/getFromDb"
 
-export default function Home() {
+export default function Home({ tours, tourCarrouselImages }) {
 
   useEffect(() => {
     // Google Tag Manager script
@@ -100,7 +101,21 @@ export default function Home() {
         </div>
 
         {/* <!-- CARROUSEL SECTION --> */}
-        <Carrousel />
+        <Carrousel images={tourCarrouselImages} />
+
+        <div id="tour-info">
+          {tours?.map(tour => (
+            <Tour
+              key={tour.id}
+              title={tour.title}
+              schedule={tour.schedule}
+              content={tour.content}
+              price={tour.price}
+              moreInfo={tour?.moreInfo}
+              images={tour.images}
+            />)
+          )}
+        </div>
 
         {/* <!-- ABOUT SECTIO --> */}
         <div className="contains-about">
@@ -210,10 +225,18 @@ export default function Home() {
             <path d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z" />
           </svg>
         </a>
-
-        {/* <Tour /> */}
       </main>
     </>
-
   )
+}
+
+export const getServerSideProps = async () => {
+  const tours = await getDataByOrder('tours', 'title', 'asc', true)
+  const tourCarrouselImages = tours.map(({ images }) => images[0])
+  return {
+    props: {
+      tours,
+      tourCarrouselImages,
+    }
+  }
 }
