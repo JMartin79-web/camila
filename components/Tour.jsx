@@ -1,7 +1,7 @@
 
-export default function Tour({ title, schedule, content, price, moreInfo, images }) {
+export default function Tour({ title, schedule, content, price, moreInfo, images, activeTour }) {
   return (
-    <div id="template-1">
+    <div className={activeTour ? '' : 'hidden'}>
       <div className="tour">
         <h2>{title}</h2>
 

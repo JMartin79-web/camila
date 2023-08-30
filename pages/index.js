@@ -109,7 +109,7 @@ export default function Home({ tours, tourCarrouselImages }) {
         />
 
         <div id="tour-info">
-          {tours?.map(tour => (
+          {tours?.map((tour, index) => (
             <Tour
               key={tour.id}
               title={tour.title}
@@ -118,6 +118,7 @@ export default function Home({ tours, tourCarrouselImages }) {
               price={tour.price}
               moreInfo={tour?.moreInfo}
               images={tour.images}
+              activeTour={activeDot === index}
             />)
           )}
         </div>
