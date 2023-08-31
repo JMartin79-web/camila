@@ -3,7 +3,7 @@ import magic from "../assets/fotos/magia.png"
 import { useState } from 'react'
 
 export default function Carrousel({ images, activeDot, setActiveDot }) {
-    const [operacion, setOperacion] = useState('')
+    const [operacion, setOperacion] = useState(0)
 
     const handleSlide = (index) => {
         const position = index * -33.3
@@ -12,15 +12,23 @@ export default function Carrousel({ images, activeDot, setActiveDot }) {
     }
 
     const handleNext = () => {
-        if (activeDot + 1 === images.length) return
-        setOperacion(prev => prev + -33.3)
-        setActiveDot(prev => prev + 1)
+        if (activeDot + 1 === images.length) {
+            setOperacion(0)
+            setActiveDot(0)
+        } else {
+            setOperacion(prev => prev + -33.3)
+            setActiveDot(prev => prev + 1)
+        }
     }
 
     const handlePrevious = () => {
-        if (activeDot === 0) return
-        setOperacion(prev => prev - -33.3)
-        setActiveDot(prev => prev - 1)
+        if (activeDot === 0) {
+            setOperacion((images.length - 1) * -33.3)
+            setActiveDot(images.length - 1)
+        } else {
+            setOperacion(prev => prev - -33.3)
+            setActiveDot(prev => prev - 1)
+        }
     }
 
     return (
@@ -39,7 +47,6 @@ export default function Carrousel({ images, activeDot, setActiveDot }) {
                             <div className="magia">
                                 <Image width={25} src={magic} alt="" />
                             </div>
-
                         </div>
                     </h2>
                 </div>
