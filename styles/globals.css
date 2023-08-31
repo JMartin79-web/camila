@@ -1715,8 +1715,8 @@ textarea:focus {
 
 .contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .flecha {
   display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
   margin: 0 0.5rem;
   border-top: 0.3rem solid #532212;
   border-right: 0.3rem solid #532212;

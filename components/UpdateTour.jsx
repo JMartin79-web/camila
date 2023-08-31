@@ -83,15 +83,12 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
                     &times;
                 </button>
                 <button type='button'
-                    className='flex items-center bg-white text-black px-4 pt-2 border-slate-300 w-fit border-2 rounded hover:opacity-50'
-                    onClick={toggle}>{!boolValue ?
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="6 9 12 15 18 9" />
-                        </svg> :
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="18 15 12 9 6 15" />
-                        </svg>
-                    }
+                    className={`flex items-center bg-white text-black px-4 pt-2 border-slate-300 
+                    w-fit border-2 rounded hover:opacity-50 ${boolValue ? 'rotate-180' : ''}`}
+                    onClick={toggle}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
                 </button>
                 <button className='bg-green-500 text-white px-4 py-2 w-fit rounded hover:opacity-50' type='submit'>
                     <p className='hidden sm:block text-white'>Guardar Cambios</p>
@@ -126,28 +123,30 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
                         rows={6}>
                     </textarea>
 
-                    {imagesUrl?.map(src => (
-                        <div key={src} className='relative w-fit'>
-                            <button type='button'
-                                className='bg-red-600 text-white px-4 py-2 rounded hover:opacity-50 absolute top-2 right-3'
-                                onClick={() => deleteImg(undefined, src)}
-                            >
-                                Eliminar
-                            </button>
-                            <img className='max-w-[500px] rounded' src={src} alt='' />
-                        </div>
-                    ))}
+                    <div className='flex gap-4 flex-wrap'>
+                        {imagesUrl?.map(src => (
+                            <div key={src} className='relative w-fit'>
+                                <button type='button'
+                                    className='bg-red-600 text-white px-4 py-2 rounded hover:opacity-50 absolute top-2 right-3'
+                                    onClick={() => deleteImg(undefined, src)}
+                                >
+                                    Eliminar
+                                </button>
+                                <img className='max-w-[500px] rounded' src={src} alt='' />
+                            </div>
+                        ))}
 
-                    {previewImgs?.map(({ name, img }) => (
-                        <div key={name} className='relative w-fit'>
-                            <img className='max-w-[500px] rounded' src={img} alt='' />
-                            <button type='button'
-                                onClick={() => deleteImg(name)}
-                                className='bg-red-600 text-white px-4 py-2 rounded hover:opacity-50 absolute top-2 right-3'>
-                                Eliminar
-                            </button>
-                        </div>
-                    ))}
+                        {previewImgs?.map(({ name, img }) => (
+                            <div key={name} className='relative w-fit'>
+                                <img className='max-w-[500px] rounded' src={img} alt='' />
+                                <button type='button'
+                                    onClick={() => deleteImg(name)}
+                                    className='bg-red-600 text-white px-4 py-2 rounded hover:opacity-50 absolute top-2 right-3'>
+                                    Eliminar
+                                </button>
+                            </div>
+                        ))}
+                    </div>
 
                     <UploadInput handleImgAdd={handleImgAdd} />
 
