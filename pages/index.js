@@ -94,7 +94,7 @@ export default function Home({ tours, tourCarrouselImages }) {
             <div className="hero-img-filter"></div>
             <Image src={mendoza} alt="mendoza" />
           </div>
-          <section className="hero">
+          <section className="hero leading-tight">
             <h1>Your friend in<br />Mendoza</h1>
             <p className="hero-p">Let's explore together!</p>
             <button className="button">
@@ -143,9 +143,9 @@ export default function Home({ tours, tourCarrouselImages }) {
             </div>
             --> */}
 
-            <div className="about-contains-info">
+            <div className="about-contains-info leading-tight">
               <h2 className="about-tittle-mobile">Hello! We are your Mendocinians friends.</h2>
-              <h2 className="about-h">Hello! We are your</h2>
+              <h2 className="about-h text-2xl">Hello! We are your</h2>
               <h2 className="about-h-big">Mendocinians friends.</h2>
               <p className="about-p">
                 We are a group made up of 3 partners and friends who are passionate about our province and for making all those who visit it take away beautiful memories.
@@ -166,7 +166,7 @@ export default function Home({ tours, tourCarrouselImages }) {
         <div className="contains-plus">
           <div className="plus">
             <div className="plus-title">
-              <h2><div className="contains-plus-magia">
+              <h2 className="text-2xl leading-tight"><div className="contains-plus-magia">
                 <div className="plus-magia">
                   <Image width={25} src={magic} alt="" />
                 </div>
@@ -174,17 +174,17 @@ export default function Home({ tours, tourCarrouselImages }) {
                 <br />
                 services</h2>
             </div>
-            <div className="plus-txt">
+            <div className="plus-txt leading-tight">
               <p>Book one of my tours or have a free video call with me! You'll get free travel advice, more recommendations and even personalised plans. </p>
             </div>
           </div>
         </div>
 
         {/* <!-- CALL TO ACTION --> */}
-        <div className="contains-call">
+        <div className="contains-call leading-tight">
           <section className="call">
             <Image className="call-img" src={magicTitle} alt="magic title" />
-            <h2 id="contact">Let´s make it happen!</h2>
+            <h2 id="contact" className="text-2xl">Let´s make it happen!</h2>
             <p>We'll make sure it's your best trip ever!</p>
             {/* <!-- <button className="button"><a href="mailto:yourfriendinmendoza@gmail.com">EMAIL ME</a></button> --> */}
             <button className="button"><a href='https://api.whatsapp.com/send/?phone=5492616964118&text&app_absent=0' target="_blank">CONTACT US</a></button>
@@ -195,7 +195,7 @@ export default function Home({ tours, tourCarrouselImages }) {
         <div className="contains-footer">
           <footer className="footer">
 
-            <div className="footer-div1">
+            <div className="footer-div1 leading-tight">
               <br />
               <h2>Your friend in<br />Mendoza</h2>
               <br />

@@ -32,7 +32,7 @@ export default function Carrousel({ images, activeDot, setActiveDot }) {
                     <div className="bg-title"></div>
                 </div>
 
-                <div className="title-txt">
+                <div className="title-txt text-2xl">
 
                     <h2 id="tours">Our tours
                         <div className="contains-magia">

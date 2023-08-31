@@ -2,8 +2,8 @@
 export default function Tour({ title, schedule, content, price, moreInfo, images, activeTour }) {
   return (
     <div className={activeTour ? '' : 'hidden'}>
-      <div className="tour">
-        <h2>{title}</h2>
+      <div className="tour leading-tight">
+        <h2 className="text-2xl font-semibold">{title}</h2>
 
         <div className="tour-div">
           <p className="tour-schedule">{schedule}</p>
