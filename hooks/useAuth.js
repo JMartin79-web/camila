@@ -15,7 +15,13 @@ export default function useAuth() {
     useEffect(() => {
         setIsLoading(true)
         const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
-            if (currentuser) replace('/admin/dashboard')
+            if(currentuser && pathname === '/admin/dashboard-es') {
+                return setIsLoading(false)
+              }
+              else if(currentuser && pathname === '/admin/dashboard-port') {
+                return setIsLoading(false)
+              }
+              else if(currentuser) replace('/admin/dashboard')
             else replace('/admin/login')
             setTimeout(() => setIsLoading(false), 700)
         })

@@ -4,7 +4,7 @@ import PageInformationEdit from '@/components/PageInformationEdit'
 import AdminLayout from '@/components/AdminLayout'
 import useFetchData from '@/hooks/useFetchData'
 
-export default function Dashboard() {
+export default function DashboardPort() {
     const { data } = useFetchData()
 
     return (
