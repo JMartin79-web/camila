@@ -4,7 +4,7 @@ import { addToDataBase } from '@/services/addToDb'
 import { toast } from 'react-hot-toast'
 import UploadInput from './UploadInput'
 
-export default function NewTour({ collection }) {
+export default function NewTour({ collection, refetch }) {
     const formRef = useRef(null)
     const content = useRef(null)
     const title = useRef(null)
@@ -34,12 +34,19 @@ export default function NewTour({ collection }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (!images.length) return toast.error('Deberia subir minimo una Imagen!')
+        
+        toast.loading('Cargando...', {
+            position: 'top-center',
+            duration: 2000, // Set duration to null for indefinite loading toast
+        });
+
         let imgUrls = []
         for (let i = 0; i < images.length; i++) {
             const url = await mediaUpload(images[i], 'tour-images')
             imgUrls.push(url)
         }
-        const promise = addToDataBase(collection, {
+
+        await addToDataBase(collection, {
             content: content?.current?.value.split('\n').join('<br/>'),
             title: title?.current?.value,
             price: price?.current?.value.split('\n')?.join('<br/>'),
@@ -47,16 +54,13 @@ export default function NewTour({ collection }) {
             moreInfo: moreInfo?.current?.value?.split('\n')?.join('<br/>'),
             images: imgUrls
         })
-        toast.promise(promise, {
-            loading: 'Creando Tour',
-            success: 'Creacion Finalizada',
-            error: 'Hubo un error intente mas tarde!',
-        })
         setTimeout(() => {
             setImages([])
             setPreviewImgs([])
             formRef?.current?.reset()
         }, 1500)
+
+        refetch()
     }
 
     return (

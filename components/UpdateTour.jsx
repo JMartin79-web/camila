@@ -6,7 +6,7 @@ import { mediaUpload, previewFile } from '@/services/uploadToStorage'
 import { deleteDocFromDb, deleteFromStorage } from '@/services/deleteDocs'
 import UploadInput from './UploadInput'
 
-export default function Tour({ title, images, schedule, content, price, moreInfo, id, collection }) {
+export default function UpdateTour({ title, images, schedule, content, price, moreInfo, id, collection }) {
     const { boolValue, toggle } = useToggle(false)
     const contentRef = useRef(null)
     const titleRef = useRef(null)
@@ -45,6 +45,7 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
     const handleUpdate = async (e) => {
         e.preventDefault()
         if (!imagesUrl.length && !imagesArr.length) return toast.error('Deberia tener minimo una Imagen!')
+
         let imgUrls = []
         if (imagesArr.length) {
             for (let i = 0; i < imagesArr.length; i++) {
@@ -57,18 +58,13 @@ export default function Tour({ title, images, schedule, content, price, moreInfo
                 await deleteFromStorage(images[i])
             }
         }
-        const promise = updateValues(collection, id, {
+        await updateValues(collection, id, {
             title: titleRef?.current?.value,
             schedule: scheduleRef?.current?.value,
             content: contentRef?.current?.value.split('\n').join('<br/>'),
             price: priceRef?.current?.value.split('\n')?.join('<br/>'),
             moreInfo: moreInfoRef?.current?.value?.split('\n')?.join('<br/>'),
             images: [...imagesUrl, ...imgUrls]
-        })
-        await toast.promise(promise, {
-            loading: 'Applicando cambios',
-            success: 'Actaulizacion Finalizada',
-            error: 'Hubo un error intente mas tarde!',
         })
     }
 

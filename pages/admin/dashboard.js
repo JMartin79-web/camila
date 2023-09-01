@@ -5,7 +5,7 @@ import AdminLayout from '@/components/AdminLayout'
 import useFetchData from '@/hooks/useFetchData'
 
 export default function Dashboard() {
-    const { data } = useFetchData()
+    const { data, fetchData } = useFetchData()
 
     return (
         <AdminLayout>
@@ -23,11 +23,12 @@ export default function Dashboard() {
                         price={tour.price}
                         id={tour.id}
                         moreInfo={tour?.moreInfo}
+                        refetch={fetchData}
                     />
                 ))}
             </section>
 
-            <NewTour collection='tours' />
+            <NewTour collection='tours' refetch={fetchData} />
         </AdminLayout>
     )
 }
