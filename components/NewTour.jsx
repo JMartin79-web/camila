@@ -60,7 +60,7 @@ export default function NewTour({ collection }) {
     }
 
     return (
-        <form className='flex flex-col gap-4 sm:w-1/2' ref={formRef} onSubmit={handleSubmit}>
+        <form className='flex flex-col gap-4 my-4' ref={formRef} onSubmit={handleSubmit}>
             <h2 className='text-lg font-semibold text-left'>Nuevo Tour:</h2>
             <input ref={title}
                 className=''

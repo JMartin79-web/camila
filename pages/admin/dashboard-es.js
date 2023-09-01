@@ -9,12 +9,12 @@ export default function DashboardEs() {
 
     return (
         <AdminLayout>
-            <PageInformationEdit collection='' />
+            <PageInformationEdit collection='page-info-es' />
 
             <section className='mt-8'>
                 <h2 className='text-lg font-semibold'>Tours:</h2>
                 {data?.map((tour) => (
-                    <UpdateTour collection="tours"
+                    <UpdateTour collection="tours-es"
                         title={tour.title}
                         key={tour.id}
                         images={tour.images}
@@ -27,9 +27,7 @@ export default function DashboardEs() {
                 ))}
             </section>
 
-            <center>
-                <NewTour collection='tours' />
-            </center>
+            <NewTour collection='tours-es' />
         </AdminLayout>
     )
 }

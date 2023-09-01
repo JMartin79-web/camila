@@ -9,12 +9,12 @@ export default function DashboardPort() {
 
     return (
         <AdminLayout>
-            <PageInformationEdit collection='' />
+            <PageInformationEdit collection='page-info-port' />
 
             <section className='mt-8'>
                 <h2 className='text-lg font-semibold'>Tours:</h2>
                 {data?.map((tour) => (
-                    <UpdateTour collection="tours"
+                    <UpdateTour collection="tours-port"
                         title={tour.title}
                         key={tour.id}
                         images={tour.images}
@@ -27,9 +27,7 @@ export default function DashboardPort() {
                 ))}
             </section>
 
-            <center>
-                <NewTour collection='tours' />
-            </center>
+            <NewTour collection='tours-port' />
         </AdminLayout>
     )
 }

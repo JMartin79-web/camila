@@ -9,7 +9,7 @@ export default function Dashboard() {
 
     return (
         <AdminLayout>
-            <PageInformationEdit collection='' />
+            <PageInformationEdit collection='page-info' />
 
             <section className='mt-8'>
                 <h2 className='text-lg font-semibold'>Tours:</h2>
@@ -27,9 +27,7 @@ export default function Dashboard() {
                 ))}
             </section>
 
-            <center>
-                <NewTour collection='tours' />
-            </center>
+            <NewTour collection='tours' />
         </AdminLayout>
     )
 }
