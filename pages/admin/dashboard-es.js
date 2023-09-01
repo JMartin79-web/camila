@@ -5,7 +5,7 @@ import AdminLayout from '@/components/AdminLayout'
 import useFetchData from '@/hooks/useFetchData'
 
 export default function DashboardEs() {
-    const { data } = useFetchData()
+    const { data } = useFetchData('es')
 
     return (
         <AdminLayout>

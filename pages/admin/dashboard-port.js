@@ -5,7 +5,7 @@ import AdminLayout from '@/components/AdminLayout'
 import useFetchData from '@/hooks/useFetchData'
 
 export default function DashboardPort() {
-    const { data } = useFetchData()
+    const { data } = useFetchData('port')
 
     return (
         <AdminLayout>
