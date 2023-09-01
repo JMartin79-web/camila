@@ -7,6 +7,20 @@ import Carrousel from "@/components/home/Carrousel"
 import { useEffect, useState } from "react"
 import { getDataByOrder } from "@/services/getFromDb"
 import Layout from "@/components/home/Layout"
+import Flags from "@/components/Flags"
+
+const aboutHeader = 'Hello! We are your Mendocinians friends.'
+const aboutText = `We are a group made up of 3 partners and friends who are passionate about our province and for making all those who visit it take away beautiful memories.
+<br /><br />
+We can and we want to be more than your guides or drivers. We want to take care of you and adapt to your preferences and needs so your days in Mendoza are the happiest and most memorable.
+<br /><br />
+Team up with us and book a tour with recommendations that only locals know.
+<br />
+Even if you want us to put together a personalized tour for you, feel free to ask us and we will gladly help you.`
+const plus = 'Plus services'
+const plusText = `Book one of my tours or have a free video call with me! You'll get free travel advice, more recommendations and even personalised plans.`
+const callToAction = ['Let´s make it happen!', `We'll make sure it's your best trip ever!`, 'CONTACT US']
+const whatsappNumber = '5492616964118'
 
 export default function Home({ tours, tourCarrouselImages }) {
   const [activeDot, setActiveDot] = useState(0)
@@ -49,7 +63,10 @@ export default function Home({ tours, tourCarrouselImages }) {
           ></iframe>
         </noscript>
       </Head>
-      <Layout whatsappNumber={'5492616964118'}>
+
+      <Flags style='absolute top-8 left-6 z-50 flex gap-4' />
+
+      <Layout whatsappNumber={whatsappNumber}>
 
         {/* <!-- CARROUSEL SECTION --> */}
         <Carrousel
@@ -93,20 +110,10 @@ export default function Home({ tours, tourCarrouselImages }) {
             --> */}
 
             <div className="about-contains-info leading-tight text-2xl">
-              <h2 className="about-tittle-mobile">Hello! We are your Mendocinians friends.</h2>
-              <h2 className="about-h text-2xl">Hello! We are your</h2>
-              <h2 className="about-h-big">Mendocinians friends.</h2>
-              <p className="about-p text-base leading-tight">
-                We are a group made up of 3 partners and friends who are passionate about our province and for making all those who visit it take away beautiful memories.
-                <br /><br />
-
-                We can and we want to be more than your guides or drivers. We want to take care of you and adapt to your preferences and needs so your days in Mendoza are the happiest and most memorable.
-                <br /><br />
-
-                Team up with us and book a tour with recommendations that only locals know.
-                <br />
-                Even if you want us to put together a personalized tour for you, feel free to ask us and we will gladly help you.
-              </p>
+              <h2 className="about-tittle-mobile">{aboutHeader}</h2>
+              <h2 className="about-h text-2xl">{aboutHeader.slice(0, 18)}</h2>
+              <h2 className="about-h-big">{aboutHeader.slice(19)}</h2>
+              <p className="about-p text-base leading-tight" dangerouslySetInnerHTML={{ __html: aboutText }} />
             </div>
           </section>
         </div>
@@ -119,12 +126,12 @@ export default function Home({ tours, tourCarrouselImages }) {
                 <div className="plus-magia">
                   <Image width={25} src={magic} alt="" />
                 </div>
-              </div>Plus
+              </div>{plus.slice(0, 5)}
                 <br />
-                services</h2>
+                {plus.slice(5)}</h2>
             </div>
             <div className="plus-txt leading-tight">
-              <p>Book one of my tours or have a free video call with me! You'll get free travel advice, more recommendations and even personalised plans. </p>
+              <p>{plusText}</p>
             </div>
           </div>
         </div>
@@ -133,10 +140,12 @@ export default function Home({ tours, tourCarrouselImages }) {
         <div className="contains-call leading-tight">
           <section className="call">
             <Image className="call-img" src={magicTitle} alt="magic title" />
-            <h2 id="contact" className="text-2xl">Let´s make it happen!</h2>
-            <p>We'll make sure it's your best trip ever!</p>
+            <h2 id="contact" className="text-2xl">{callToAction[0]}</h2>
+            <p>{callToAction[1]}</p>
             {/* <!-- <button className="button"><a href="mailto:yourfriendinmendoza@gmail.com">EMAIL ME</a></button> --> */}
-            <button className="button"><a href='https://api.whatsapp.com/send/?phone=5492616964118&text&app_absent=0' target="_blank">CONTACT US</a></button>
+            <button className="button">
+              <a href={`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text&app_absent=0`} target="_blank">{callToAction[2]}</a>
+            </button>
           </section>
         </div>
 
