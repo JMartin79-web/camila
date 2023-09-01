@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import magic from "../assets/fotos/magia.png"
+import magic from "../../assets/fotos/magia.png"
 import { useState } from 'react'
 
-export default function Carrousel({ images, activeDot, setActiveDot }) {
+export default function Carrousel({ header, images, activeDot, setActiveDot }) {
     const [operacion, setOperacion] = useState(0)
 
     const handleSlide = (index) => {
@@ -42,7 +42,7 @@ export default function Carrousel({ images, activeDot, setActiveDot }) {
 
                 <div className="title-txt text-2xl">
 
-                    <h2 id="tours">Our tours
+                    <h2 id="tours">{header}
                         <div className="contains-magia">
                             <div className="magia">
                                 <Image width={25} src={magic} alt="" />
