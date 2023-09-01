@@ -1490,7 +1490,7 @@ textarea:focus {
   .contains-about .about {
     width: 100%;
     max-width: 1080px;
-    padding: 15px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1748,7 +1748,7 @@ textarea:focus {
 #tour-info .tour {
   width: 100%;
   max-width: 1080px;
-  padding: 15px;
+  padding: 5px;
   padding-top: 0;
   /* esto era para esconder el contenido con una clase y tener un boton de see more
   .tour-div-hiden{
@@ -1816,6 +1816,9 @@ textarea:focus {
 @media screen and (max-width: 768px) {
   .contains-carrousel .carrousel-title .bg-div-title .bg-title {
     width: 75%;
+  }
+  #tour-info .tour {
+    padding: 15px;
   }
 }
 

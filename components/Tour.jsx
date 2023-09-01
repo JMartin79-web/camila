@@ -9,9 +9,9 @@ export default function Tour({ title, schedule, content, price, moreInfo, images
           <p className="tour-schedule">{schedule}</p>
           <br />
           <p dangerouslySetInnerHTML={{ __html: content }} />
-          <br /><br />
+          <br />
           <p className="price" dangerouslySetInnerHTML={{ __html: price }} />
-          <br /><br />
+          <br />
           <p className="tour-schedule-aclarations" dangerouslySetInnerHTML={{ __html: moreInfo }} />
 
           <div className="tour-galery">

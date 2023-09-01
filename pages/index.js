@@ -110,7 +110,7 @@ export default function Home({ tours, tourCarrouselImages }) {
           setActiveDot={setActiveDot}
         />
 
-        <div id="tour-info">
+        <div id="tour-info" className="bg-[#f7f6f5]">
           {tours?.map((tour, index) => (
             <Tour
               key={tour.id}
@@ -143,11 +143,11 @@ export default function Home({ tours, tourCarrouselImages }) {
             </div>
             --> */}
 
-            <div className="about-contains-info leading-tight">
+            <div className="about-contains-info leading-tight text-2xl">
               <h2 className="about-tittle-mobile">Hello! We are your Mendocinians friends.</h2>
               <h2 className="about-h text-2xl">Hello! We are your</h2>
               <h2 className="about-h-big">Mendocinians friends.</h2>
-              <p className="about-p">
+              <p className="about-p text-base leading-tight">
                 We are a group made up of 3 partners and friends who are passionate about our province and for making all those who visit it take away beautiful memories.
                 <br /><br />
 
