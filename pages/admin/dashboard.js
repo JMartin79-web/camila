@@ -1,26 +1,13 @@
-import Loading from '@/components/Loading'
 import NewTour from '@/components/NewTour'
-import useAuth from '@/hooks/useAuth'
 import { getDataByOrder } from '@/services/getFromDb'
-import { Toaster } from 'react-hot-toast'
 import UpdateTour from '@/components/UpdateTour'
 import PageInformationEdit from '@/components/PageInformationEdit'
-import Flags from '@/components/Flags'
+import AdminLayout from '@/components/AdminLayout'
 
 export default function Dashboard({ data }) {
-    const { logout, isLoading } = useAuth()
 
-    return (<>
-        <Loading isLoading={isLoading} />
-        <Toaster />
-        <div className='min-h-screen bg-gray-100 text-black p-6'>
-            <Flags style='flex gap-2' />
-
-            <button className='absolute right-4 top-2 bg-tourBrown text-white px-4 py-2 rounded hover:opacity-50'
-                onClick={logout}>
-                Logout
-            </button>
-
+    return (
+        <AdminLayout>
             <PageInformationEdit collection='' />
 
             <section className='mt-8'>
@@ -42,8 +29,8 @@ export default function Dashboard({ data }) {
             <center>
                 <NewTour collection='tours' />
             </center>
-        </div>
-    </>)
+        </AdminLayout>
+    )
 }
 
 export const getServerSideProps = async () => {

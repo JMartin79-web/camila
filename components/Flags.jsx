@@ -17,12 +17,12 @@ export default function Flags({ style, handleLangauge = console.log }) {
     return (
         <div className={style}>
             <button className='hover:opacity-50' onClick={() => handleFlagPress('/admin/dashboard')}>
-                <Image src={spanish} alt="español" width={size} height={size} />
-            </button>
-            <button className='hover:opacity-50' onClick={() => handleFlagPress('/admin/eng-dashboard')}>
                 <Image src={english} alt="english" width={size} height={size} />
             </button>
-            <button className='hover:opacity-50' onClick={() => handleFlagPress('/admin/port-dashboard')}>
+            <button className='hover:opacity-50' onClick={() => handleFlagPress('/admin/dashboard-es')}>
+                <Image src={spanish} alt="español" width={size} height={size} />
+            </button>
+            <button className='hover:opacity-50' onClick={() => handleFlagPress('/admin/dashboard-port')}>
                 <Image src={portugues} alt="portugues" width={size} height={size} />
             </button>
         </div>
