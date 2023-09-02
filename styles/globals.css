@@ -69,26 +69,6 @@ $negro: #1B1717;
 
 $verde-wts: #0DC143;
 */
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
 
 * {
   margin: 0;
@@ -117,6 +97,30 @@ a {
 p {
   font-family: "Montserrat", sans-serif;
   color: #030304;
+}
+
+/* Equivalent combined CSS class */
+input,
+textarea {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.375rem;
+  /* You may adjust the value to match Tailwind's rounded-md */
+  border-width: 2px;
+  border-style: solid;
+  border-color: #7180965d;
+  /* Adjust the color value as per your design */
+  outline: none;
+  /* Remove default outline on focus */
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #7e3314;
+  /* Adjust the color value as per your design */
 }
 
 .contains-magia {
@@ -1486,7 +1490,7 @@ p {
   .contains-about .about {
     width: 100%;
     max-width: 1080px;
-    padding: 15px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1613,7 +1617,7 @@ p {
   display: flex;
   margin: auto;
   height: 2rem;
-  width: 15%;
+  width: 23%;
   padding: 0 3rem;
   border-radius: 1rem;
   background-color: #7e3314;
@@ -1711,8 +1715,8 @@ p {
 
 .contains-carrousel .carrousel-div .carrousel .contains-puntos .puntos .flecha {
   display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
   margin: 0 0.5rem;
   border-top: 0.3rem solid #532212;
   border-right: 0.3rem solid #532212;
@@ -1744,7 +1748,7 @@ p {
 #tour-info .tour {
   width: 100%;
   max-width: 1080px;
-  padding: 15px;
+  padding: 5px;
   padding-top: 0;
   /* esto era para esconder el contenido con una clase y tener un boton de see more
   .tour-div-hiden{
@@ -1811,7 +1815,10 @@ p {
 
 @media screen and (max-width: 768px) {
   .contains-carrousel .carrousel-title .bg-div-title .bg-title {
-    width: 50%;
+    width: 75%;
+  }
+  #tour-info .tour {
+    padding: 15px;
   }
 }
 
@@ -1903,8 +1910,8 @@ p {
 }
 
 .contains-call .call .call-img {
-  width: 75px;
-  height: 75px;
+  width: 105px;
+  height: 105px;
   margin: 30px 0px 15px;
   padding: 15px;
 }
