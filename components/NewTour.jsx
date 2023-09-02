@@ -34,10 +34,10 @@ export default function NewTour({ collection, refetch }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (!images.length) return toast.error('Deberia subir minimo una Imagen!')
-        
+
         toast.loading('Cargando...', {
             position: 'top-center',
-            duration: 2000, // Set duration to null for indefinite loading toast
+            duration: 2000,
         });
 
         let imgUrls = []

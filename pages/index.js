@@ -64,7 +64,7 @@ export default function Home({ tours, tourCarrouselImages }) {
         </noscript>
       </Head>
 
-      <Flags style='absolute top-8 left-6 z-50 flex gap-4' />
+      <Flags style='absolute top-8 left-12 z-50 flex gap-4' />
 
       <Layout whatsappNumber={whatsappNumber}>
 
