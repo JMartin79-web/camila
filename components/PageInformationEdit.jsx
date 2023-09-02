@@ -1,6 +1,5 @@
 import { updateValues } from '@/services/addToDb'
 import { useRef } from 'react'
-import { toast } from 'react-hot-toast'
 import SubmitButton from './SubmitButton'
 
 export default function PageInformationEdit({ collection, docId, aboutHeader, aboutText, whatsappNum }) {
@@ -10,10 +9,6 @@ export default function PageInformationEdit({ collection, docId, aboutHeader, ab
 
     const handleUpdate = async (e) => {
         e.preventDefault()
-        toast.loading('Aplicando Cambios', {
-            position: 'top-center',
-            duration: 2000,
-        });
         await updateValues(collection, docId, {
             aboutTitle: aboutTitle.current.value.split('\n').join('<br/>'),
             aboutUsInfo: aboutUs.current.value.split('\n').join('<br/>'),

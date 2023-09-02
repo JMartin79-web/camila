@@ -28,7 +28,6 @@ export default function Dashboard() {
                         price={tour.price}
                         id={tour.id}
                         moreInfo={tour?.moreInfo}
-                        refetch={fetchData}
                     />
                 ))}
             </section>

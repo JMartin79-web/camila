@@ -5,11 +5,16 @@ import AdminLayout from '@/components/AdminLayout'
 import useFetchData from '@/hooks/useFetchData'
 
 export default function DashboardEs() {
-    const { data } = useFetchData('es')
+    const { data, fetchData, pageData } = useFetchData('es')
 
     return (
         <AdminLayout>
-            <PageInformationEdit collection='page-info-es' />
+            <PageInformationEdit collection='page-info-es'
+                docId={pageData.id}
+                aboutHeader={pageData.aboutTitle}
+                aboutText={pageData.aboutUsInfo}
+                whatsappNum={pageData.whatsapp}
+            />
 
             <section className='mt-8'>
                 <h2 className='text-lg font-semibold'>Tours:</h2>
@@ -27,7 +32,7 @@ export default function DashboardEs() {
                 ))}
             </section>
 
-            <NewTour collection='tours-es' />
+            <NewTour collection='tours-es' refetch={fetchData} />
         </AdminLayout>
     )
 }
