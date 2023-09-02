@@ -45,7 +45,7 @@ export default function UpdateTour({ title, images, schedule, content, price, mo
 
     const handleUpdate = async (e) => {
         e.preventDefault()
-        if (!imagesUrl.length && !imagesArr.length) return toast.error('Deberia tener minimo una Imagen!')
+        if (!imagesUrl.length && !imagesArr.length) return toast('Deberia tener minimo una Imagen!')
 
         let imgUrls = []
         if (imagesArr.length) {

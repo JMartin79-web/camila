@@ -22,13 +22,13 @@ export const deleteDocFromDb = async (dbCollection, id, images) => {
             }
         }
         const document = doc(db, dbCollection, id)
-        const promise = deleteDoc(document)
-        toast.promise(promise, {
-            loading: 'Eliminando',
-            success: 'Actaulizacion Finalizada',
-            error: 'Hubo un error intente mas tarde!',
+        await deleteDoc(document)
+        toast('Actaulizacion Finalizada', {
+            style: { backgroundColor: 'rgb(34 197 94)', color: 'white' }
         })
     } catch (error) {
-        alert('Ocurrio un error, intente mas tarde!')
+        toast('Ocurrio un error, intente mas tarde!', {
+            style: { backgroundColor: 'red', color: 'white' }
+        })
     }
 }
