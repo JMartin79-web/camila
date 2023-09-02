@@ -2,16 +2,7 @@ import useToggle from '@/hooks/useToggle'
 import mendoza from "../../assets/fotos/hero_img2.jpg"
 import Image from 'next/image'
 
-const navList = ['About', 'Tours', 'Contact']
-const navListEs = ['about', 'tours', 'contact']
-const navListPort = ['about', 'tours', 'contact']
-
-const yourFriend = 'Your friend in'
-const explore = `Let's explore together!`
-const talk = 'LETS TALK'
-const thankYou = 'Thank you for visiting'
-
-export default function Layout({ children, whatsappNumber }) {
+export default function Layout({ children, whatsappNumber, navList, yourFriend, explore, talk, thankYou }) {
     const { boolValue: openNav, toggle } = useToggle(false)
 
     {/* <!-- HEADER --> */ }

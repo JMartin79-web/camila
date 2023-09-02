@@ -59,7 +59,7 @@ export default function Home({ allTours, carrouselImages, allTextOnPage }) {
   return (
     <>
       <Head>
-        <title>{pageInfo.webpageTitle}</title>
+        <title>{pageInfo.webpageTitle} Mendoza</title>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NBLDKCL"
@@ -72,11 +72,17 @@ export default function Home({ allTours, carrouselImages, allTextOnPage }) {
 
       <Flags style='absolute top-8 left-12 z-50 flex gap-4' handleLangauge={handleLangaugePress} />
 
-      <Layout whatsappNumber={pageInfo.whatsapp}>
+      <Layout whatsappNumber={pageInfo.whatsapp}
+        navList={pageInfo.navList}
+        yourFriend={pageInfo.webpageTitle}
+        explore={pageInfo.explore}
+        talk={pageInfo.talk}
+        thankYou={pageInfo.thankYou}
+      >
 
         {/* <!-- CARROUSEL SECTION --> */}
         <Carrousel
-          header={'Our Tours'}
+          header={pageInfo.tourHeader}
           images={carrouselImages}
           activeDot={activeDot}
           setActiveDot={setActiveDot}
@@ -182,9 +188,9 @@ export const getServerSideProps = async () => {
         port: tourDataPort
       },
       allTextOnPage: {
-        en: pageInfoEn[0],
-        es: pageInfoEs[0],
-        port: pageInfoPort[0]
+        en: { ...pageInfoEn[0], ...notInDatabase[0] },
+        es: { ...pageInfoEs[0], ...notInDatabase[1] },
+        port: { ...pageInfoPort[0], ...notInDatabase[2] }
       }
     }
   }
