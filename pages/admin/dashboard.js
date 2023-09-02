@@ -5,11 +5,16 @@ import AdminLayout from '@/components/AdminLayout'
 import useFetchData from '@/hooks/useFetchData'
 
 export default function Dashboard() {
-    const { data, fetchData } = useFetchData()
+    const { data, fetchData, pageData } = useFetchData()
 
     return (
         <AdminLayout>
-            <PageInformationEdit collection='page-info' />
+            <PageInformationEdit collection='page-info'
+                docId={pageData.id}
+                aboutHeader={pageData.aboutTitle}
+                aboutText={pageData.aboutUsInfo}
+                whatsappNum={pageData.whatsapp}
+            />
 
             <section className='mt-8'>
                 <h2 className='text-lg font-semibold'>Tours:</h2>
