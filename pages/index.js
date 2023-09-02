@@ -9,8 +9,27 @@ import { getData, getDataByOrder } from "@/services/getFromDb"
 import Layout from "@/components/home/Layout"
 import Flags from "@/components/Flags"
 
-export default function Home({ tours, tourCarrouselImages, pageInfo }) {
+const notInDatabase = [
+  {
+    tourHeader: 'Our Tours', navList: ['About', 'Tours', 'Contact'], explore: `Let's explore together!`, talk: 'LETS TALK', thankYou: 'Thank you for visiting'
+  },
+  {
+    tourHeader: 'Nuestros Tours', navList: ['Quienes somos', 'Tours', 'Contacto'], explore: `¡Exploremos juntos!`, talk: 'HABLEMOS', thankYou: 'Gracias por su visita'
+  },
+  {
+    tourHeader: 'Nossos Passeios', navList: ['Quem somos', 'Passeios', 'Contato'], explore: `Vamos explorar juntos!`, talk: 'VAMOS CONVERSAR', thankYou: 'Obrigado pela visita'
+  },
+]
+
+export default function Home({ allTours, carrouselImages, allTextOnPage }) {
   const [activeDot, setActiveDot] = useState(0)
+  const [tours, setTours] = useState(allTours.en)
+  const [pageInfo, setPageData] = useState(allTextOnPage.en)
+
+  const handleLangaugePress = (language) => {
+    setTours(allTours[language])
+    setPageData(allTextOnPage[language])
+  }
 
   useEffect(() => {
     // Google Tag Manager script
@@ -51,14 +70,14 @@ export default function Home({ tours, tourCarrouselImages, pageInfo }) {
         </noscript>
       </Head>
 
-      <Flags style='absolute top-8 left-12 z-50 flex gap-4' />
+      <Flags style='absolute top-8 left-12 z-50 flex gap-4' handleLangauge={handleLangaugePress} />
 
       <Layout whatsappNumber={pageInfo.whatsapp}>
 
         {/* <!-- CARROUSEL SECTION --> */}
         <Carrousel
           header={'Our Tours'}
-          images={tourCarrouselImages}
+          images={carrouselImages}
           activeDot={activeDot}
           setActiveDot={setActiveDot}
         />
@@ -144,14 +163,29 @@ export default function Home({ tours, tourCarrouselImages, pageInfo }) {
 }
 
 export const getServerSideProps = async () => {
-  const tours = await getDataByOrder('tours', 'title', 'asc', true)
-  const tourCarrouselImages = tours.map(({ images }) => images[0])
-  const pageInfo = await getData('page-info')
+  const [tourDataEn, tourDataEs, tourDataPort, pageInfoEn, pageInfoEs, pageInfoPort] = await Promise.all([
+    getDataByOrder('tours', 'title', 'asc', true),
+    getDataByOrder('tours-es', 'title', 'asc', true),
+    getDataByOrder('tours-port', 'title', 'asc', true),
+    getData('page-info'),
+    getData('page-info-es'),
+    getData('page-info-port')
+  ])
+  const carrouselImages = tourDataEn.map(({ images }) => images[0])
+
   return {
     props: {
-      tours,
-      tourCarrouselImages,
-      pageInfo: pageInfo[0]
+      carrouselImages,
+      allTours: {
+        en: tourDataEn,
+        es: tourDataEs,
+        port: tourDataPort
+      },
+      allTextOnPage: {
+        en: pageInfoEn[0],
+        es: pageInfoEs[0],
+        port: pageInfoPort[0]
+      }
     }
   }
 }
