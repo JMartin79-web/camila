@@ -7,7 +7,7 @@ import { deleteDocFromDb, deleteFromStorage } from '@/services/deleteDocs'
 import UploadInput from './UploadInput'
 import SubmitButton from './SubmitButton'
 
-export default function UpdateTour({ title, images, schedule, content, price, moreInfo, id, collection }) {
+export default function UpdateTour({ title, images, schedule, content, price, moreInfo, id, collection, handleDeleteTour }) {
     const { boolValue, toggle } = useToggle(false)
     const contentRef = useRef(null)
     const titleRef = useRef(null)
@@ -75,7 +75,10 @@ export default function UpdateTour({ title, images, schedule, content, price, mo
                 <input placeholder='Titulo' className='grow' defaultValue={title} ref={titleRef} required />
                 <button type='button'
                     className='bg-red-600 text-white px-3 pb-1 text-2xl rounded hover:opacity-50'
-                    onClick={() => deleteDocFromDb(collection, id, images)}
+                    onClick={async () => {
+                        await deleteDocFromDb(collection, id, images)
+                        handleDeleteTour(id)
+                    }}
                 >
                     &times;
                 </button>
