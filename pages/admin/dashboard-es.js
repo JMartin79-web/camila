@@ -5,7 +5,7 @@ import AdminLayout from '@/components/AdminLayout'
 import useFetchData from '@/hooks/useFetchData'
 
 export default function DashboardEs() {
-    const { data, fetchData, pageData } = useFetchData('es')
+    const { data, fetchData, pageData, handleDeleteTour } = useFetchData('es')
 
     return (
         <AdminLayout>
@@ -28,6 +28,7 @@ export default function DashboardEs() {
                         price={tour.price}
                         id={tour.id}
                         moreInfo={tour?.moreInfo}
+                        handleDeleteTour={handleDeleteTour}
                     />
                 ))}
             </section>

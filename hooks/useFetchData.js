@@ -20,9 +20,14 @@ export default function useFetchData(language) {
         setPageData(pageInfo[0])
     }
 
+    const handleDeleteTour = (docId) => {
+        const updateTours = data.filter(({ id }) => id !== docId)
+        setData(updateTours)
+    }
+
     useEffect(() => {
         fetchData()
     }, [])
 
-    return { data, fetchData, pageData }
+    return { data, fetchData, pageData, handleDeleteTour }
 }

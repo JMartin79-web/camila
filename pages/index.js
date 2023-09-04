@@ -59,7 +59,7 @@ export default function Home({ allTours, carrouselImages, allTextOnPage }) {
   return (
     <>
       <Head>
-        <title>{pageInfo.webpageTitle} Mendoza</title>
+        <title>{`${pageInfo.webpageTitle} Mendoza`}</title>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NBLDKCL"
