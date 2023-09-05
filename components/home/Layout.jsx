@@ -1,6 +1,6 @@
 import useToggle from '@/hooks/useToggle'
-import mendoza from "../../assets/fotos/hero_img2.jpg"
-import Image from 'next/image'
+
+const mendoza = 'https://firebasestorage.googleapis.com/v0/b/yourfriendinmendoza-a49d2.appspot.com/o/hero_img2.jpg?alt=media&token=b4aeb3d5-785f-46d3-a70c-aba697423d2e'
 
 export default function Layout({ children, whatsappNumber, navList, yourFriend, explore, talk, thankYou }) {
     const { boolValue: openNav, toggle } = useToggle(false)
@@ -38,7 +38,7 @@ export default function Layout({ children, whatsappNumber, navList, yourFriend, 
         <div className="contains-hero">
             <div className="hero-img">
                 <div className="hero-img-filter"></div>
-                <Image src={mendoza} alt="mendoza" />
+                <img src={mendoza} alt="mendoza" />
             </div>
             <section className="hero leading-tight">
                 <h1>{yourFriend}<br />Mendoza</h1>

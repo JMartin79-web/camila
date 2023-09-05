@@ -1,7 +1,4 @@
 import Head from "next/head"
-import magic from "../assets/fotos/magia.png"
-import magicTitle from "../assets/fotos/maiga-title.png"
-import Image from "next/image"
 import Tour from "@/components/home/Tour"
 import Carrousel from "@/components/home/Carrousel"
 import { useEffect, useState } from "react"
@@ -9,6 +6,8 @@ import { getData, getDataByOrder } from "@/services/getFromDb"
 import Layout from "@/components/home/Layout"
 import Flags from "@/components/Flags"
 
+const magicTitle = "https://firebasestorage.googleapis.com/v0/b/yourfriendinmendoza-a49d2.appspot.com/o/maiga-title.png?alt=media&token=38aaf826-9547-481a-831f-87b19de398a4"
+const magic = "https://firebasestorage.googleapis.com/v0/b/yourfriendinmendoza-a49d2.appspot.com/o/magia.png?alt=media&token=93df8378-d9fe-436b-91b9-833a707eca7a"
 const notInDatabase = [
   {
     tourHeader: 'Our Tours', navList: ['About', 'Tours', 'Contact'], explore: `Let's explore together!`, talk: 'LETS TALK', thankYou: 'Thank you for visiting'
@@ -138,7 +137,7 @@ export default function Home({ allTours, carrouselImages, allTextOnPage }) {
             <div className="plus-title">
               <h2 className="text-2xl leading-tight"><div className="contains-plus-magia">
                 <div className="plus-magia">
-                  <Image width={25} src={magic} alt="" />
+                  <img width={25} src={magic} alt="" />
                 </div>
               </div>{pageInfo.plus.slice(0, 5)}
                 <br />
@@ -153,7 +152,7 @@ export default function Home({ allTours, carrouselImages, allTextOnPage }) {
         {/* <!-- CALL TO ACTION --> */}
         <div className="contains-call leading-tight">
           <section className="call">
-            <Image className="call-img" src={magicTitle} alt="magic title" />
+            <img className="call-img" src={magicTitle} alt="magic title" />
             <h2 id="contact" className="text-2xl">{pageInfo.callToAction[0]}</h2>
             <p>{pageInfo.callToAction[1]}</p>
             {/* <!-- <button className="button"><a href="mailto:yourfriendinmendoza@gmail.com">EMAIL ME</a></button> --> */}

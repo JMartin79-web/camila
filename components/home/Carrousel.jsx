@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import magic from "../../assets/fotos/magia.png"
 import { useState } from 'react'
+
+const magic = "https://firebasestorage.googleapis.com/v0/b/yourfriendinmendoza-a49d2.appspot.com/o/magia.png?alt=media&token=93df8378-d9fe-436b-91b9-833a707eca7a"
 
 export default function Carrousel({ header, images, activeDot, setActiveDot }) {
     const [operacion, setOperacion] = useState(0)
@@ -45,7 +45,7 @@ export default function Carrousel({ header, images, activeDot, setActiveDot }) {
                     <h2 id="tours">{header}
                         <div className="contains-magia">
                             <div className="magia">
-                                <Image width={25} src={magic} alt="" />
+                                <img width={25} src={magic} alt="" />
                             </div>
                         </div>
                     </h2>
