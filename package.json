@@ -5,9 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path styles styles/styles.scss css/styles.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "watch-sass": "sass --watch styles/styles.scss css/styles.css",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
