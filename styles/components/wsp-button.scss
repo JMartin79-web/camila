@@ -1,0 +1,43 @@
+#btn-wsp{
+    position:fixed;
+    z-index:100;
+    bottom:25px;
+    right:25px;
+    border-radius: 50%;
+
+    width: 70px;
+    height: 70px;
+    background-color: $verde-wts;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+        transition: all .5s ease;
+        background-color: $blanco;
+        svg{fill: $verde;}
+    }
+    svg{
+        margin-top: -2px;
+        height: 45px;
+        width: 45px;
+        fill: $blanco;
+    }
+}
+// RESPONSIVE
+@media screen and (max-width: 768px) {
+    #btn-wsp{
+        bottom:15px;
+        right:15px;
+        /*
+        width:60px;
+        height:60px;
+        svg{
+            margin-top: -2px;
+            height: 35px;
+            width: 35px;
+        }
+        */
+    }
+
+}

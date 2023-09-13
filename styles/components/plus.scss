@@ -1,0 +1,53 @@
+.contains-plus{
+    width: 100%;
+    @include flex-center;
+    background-color: $bordo;
+    .plus{
+        @include width;
+        @include flex-center;
+        align-items: stretch;
+        .plus-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45%;
+            @include padding;
+            background-color: $rojo;
+
+            .contains-plus-magia{
+                display: inline-flex;
+                width: 18px;
+                height: 1.5rem;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: absolute;
+                z-index: 15!important;
+                margin-left: -20px;
+                .plus-magia{
+                    width: 18px;
+                    height: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        animation-name: magia-plus;
+                        animation-duration: 1.5s;
+                        animation-timing-function: ease;
+                        animation-iteration-count: infinite;
+                    }
+                }
+            }
+
+            h2{@include titleH2; color: $blanco; text-align: center;}
+
+
+
+
+        }
+        .plus-txt{
+            width: 55%;
+            @include padding;
+            p{color: $blanco;}
+        }
+    }
+}

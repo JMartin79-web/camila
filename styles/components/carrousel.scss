@@ -1,0 +1,213 @@
+.contains-carrousel{
+    width: 100%;
+    padding-top: 7vh;
+    @include flex-center;
+    flex-direction: column;
+    background-color: $blanco;
+    .carrousel-title{
+        @include flex-center;
+        @include width;
+        min-height: 4rem;
+        flex-direction: column;
+        .bg-div-title{
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            .bg-title{
+                display: flex;
+                margin: auto;
+                height: 2rem;
+                width: 15%;
+                padding: 0 3rem;
+                border-radius: 1rem;
+                background-color: $rojo;
+            }
+        }
+        
+        .title-txt{
+            z-index: 3;
+            display:inline;
+            text-align: center;
+            h2{
+                @include titleH2;
+                max-width: 100%;
+                color: $blanco;
+                text-align: center;}
+        }
+    }
+
+    .carrousel-div{
+        @include width;
+        @include flex-center;
+        .carrousel{
+            width: 100%;
+            padding: 30px 0px 15px;
+            overflow: hidden;
+            .grande{
+                width: 300%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-flow: row nowrap;
+                transition: all .5s ease;
+                transform: translateX(0%);
+                overflow-x: hidden!important;
+                .carrousel-div-img{
+                    width: calc( 100% / 3 - 3em );
+                    overflow: hidden;
+                    object-fit: cover;
+                    object-position: center;
+                    img{
+                        width: 100%;
+                        margin-top: -10px;
+                    }
+                }
+            }
+
+            .contains-puntos{
+                @include flex-center;
+                .puntos{
+                    max-width: 500px;
+                    padding: 0%;
+                    margin:1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-flow: row nowrap;
+                    
+                    // puntos
+                    .punto{
+                        cursor: pointer;
+                        width:  1rem;
+                        height: 1rem;
+                        margin: 0rem 1.5rem;
+                        border-radius: 50%;
+                        background-color: $bordo;
+                        &:hover{
+                            width:  1.5rem;
+                            height: 1.5rem;
+                            
+                            background-color: $rosa;
+                            transition: all .5s ease;
+                        }
+                    }
+                    .punto.activo{
+                        width:  1.5rem;
+                        height: 1.5rem;
+                        margin: 0rem 1.5rem;
+                        background-color: $rosa;
+                    }
+
+                    // flechas
+                    .flecha{
+                        display: inline-block;
+                        width:  .5rem;
+                        height:.5rem;
+                        margin: 0 .5rem;
+                        border-top: .3rem solid $bordo;
+                        border-right: .3rem solid $bordo;
+                        
+                        
+                        &:hover{
+                            border-top:.3rem solid $rojo;
+                            border-right:.3rem solid $rojo;
+                            transition: all .5s ease;
+                        }
+                    }
+                    #flecha-adelante{
+                        rotate: 45deg;
+                        cursor: pointer;
+                    }
+                    #flecha-atras{
+                        rotate: -135deg;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+
+
+        }
+    }
+
+
+}
+
+#tour-info{
+    width: 100%;
+    @include flex-center;
+    
+    .tour{
+        @include width;
+        @include padding;
+        padding-top: 0;
+        h2{@include titleH2; color: $rojo;}
+
+        .tour-btn{
+            cursor: pointer;
+            @include padding;
+            margin-top: 15px;
+            color: $rojo;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        /* esto era para esconder el contenido con una clase y tener un boton de see more
+        .tour-div-hiden{
+            display: none;
+            transition: all .5s ease;
+        }
+        */
+
+        .tour-div{
+            @include padding-top;
+            overflow-x: hidden;
+            .tour-schedule{
+                font-weight: 600;
+            }
+            .tour-schedule-aclarations{
+                font-weight: 400;
+                font-size: .9rem;
+                color: $negro-transparente;
+            }
+            .price{
+                font-weight: 600;
+                color: $rojo;
+
+            }
+            .tour-galery{
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                margin: 30px -15px;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                .tour-img{
+                    margin: 15px;
+                    height: 300px;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }                 
+                }
+            }
+
+        }
+    }
+    
+}
+
+// RESPONSIVE
+@media screen and (max-width: 768px) {
+    .contains-carrousel{
+        .carrousel-title{
+            .bg-div-title{
+                .bg-title{width: 50%;}
+            }
+            
+        }
+    }
+}
