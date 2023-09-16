@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 const magic = "https://firebasestorage.googleapis.com/v0/b/yourfriendinmendoza-a49d2.appspot.com/o/magia.png?alt=media&token=93df8378-d9fe-436b-91b9-833a707eca7a"
 
 export default function Carrousel({ header, images, activeDot, setActiveDot }) {
     const [operacion, setOperacion] = useState(0)
+    const percentage = useMemo(() => 100 / images?.length, [images])
 
     const handleSlide = (index) => {
-        const position = index * -33.3
+        const position = index * -percentage
         setOperacion(position)
         setActiveDot(index)
     }
@@ -16,17 +17,17 @@ export default function Carrousel({ header, images, activeDot, setActiveDot }) {
             setOperacion(0)
             setActiveDot(0)
         } else {
-            setOperacion(prev => prev + -33.3)
+            setOperacion(prev => prev + -percentage)
             setActiveDot(prev => prev + 1)
         }
     }
 
     const handlePrevious = () => {
         if (activeDot === 0) {
-            setOperacion((images.length - 1) * -33.3)
+            setOperacion((images.length - 1) * -percentage)
             setActiveDot(images.length - 1)
         } else {
-            setOperacion(prev => prev - -33.3)
+            setOperacion(prev => prev - -percentage)
             setActiveDot(prev => prev - 1)
         }
     }
@@ -54,12 +55,11 @@ export default function Carrousel({ header, images, activeDot, setActiveDot }) {
 
             <div className="carrousel-div">
                 <div className="carrousel">
-                    <div className="grande"
-                        style={{ transform: `translateX(${operacion}%)` }}>
+                    <div className="grande" style={{ width: `${images?.length * 100}%`, transform: `translateX(${operacion}%)` }}>
 
                         {images?.map((src, index) => (
                             <div className="carrousel-div-img" key={src}>
-                                <img width={'100%'} height={'100%'} src={src} alt={`Imagen ${index}`} className="img" />
+                                <img src={src} alt={`Imagen ${index}`} className="" />
                             </div>
                         ))}
 
